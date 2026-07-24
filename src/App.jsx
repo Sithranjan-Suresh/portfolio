@@ -11,6 +11,7 @@ import Skills from './sections/Skills'
 import About from './sections/About'
 import Education from './sections/Education'
 import CurrentlyBuilding from './sections/CurrentlyBuilding'
+import Contact from './sections/Contact'
 import Placeholder from './sections/Placeholder'
 
 const builtSections = {
@@ -22,6 +23,7 @@ const builtSections = {
   about: About,
   education: Education,
   building: CurrentlyBuilding,
+  contact: Contact,
 }
 
 function App() {
