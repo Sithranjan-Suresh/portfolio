@@ -2,6 +2,7 @@ import { useMemo } from 'react'
 import { sections } from './data/sections'
 import SignalLine from './components/SignalLine'
 import ConfidenceBand from './components/ConfidenceBand'
+import NoiseOverlay from './components/NoiseOverlay'
 import { useActiveSection } from './hooks/useActiveSection'
 import { useSmoothScroll } from './hooks/useSmoothScroll'
 import Hero from './sections/Hero'
@@ -35,6 +36,7 @@ function App() {
 
   return (
     <>
+      <NoiseOverlay />
       <SignalLine activeId={activeId} />
       <main className="lg:pl-20 px-6 max-w-5xl mx-auto">
         {orderedSections.map((SectionComponent, index) => (
