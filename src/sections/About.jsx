@@ -75,14 +75,14 @@ function About() {
           <p className="font-mono text-xs text-muted uppercase tracking-wide mb-6">
             Margin notes
           </p>
-          <div className="relative h-80 sm:h-96">
+          <div className="relative h-[27rem] sm:h-96">
             {funFacts.map((fact, i) => (
               <FadeIn
                 key={fact.alt}
                 as="div"
                 delay={i * 0.12}
                 className={`absolute w-48 sm:w-56 bg-paper text-canvas p-3 shadow-xl shadow-black/40 ${fact.rotate} hover:rotate-0 hover:z-10 transition-transform motion-reduce:transition-none ${
-                  i === 0 ? 'top-0 left-0' : 'top-36 sm:top-40 left-20 sm:left-28'
+                  i === 0 ? 'top-0 left-0' : 'top-52 left-4 sm:top-40 sm:left-28'
                 }`}
               >
                 <img
