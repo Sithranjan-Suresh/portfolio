@@ -7,25 +7,22 @@ const currentlyBuilding = null
 
 function CurrentlyBuilding() {
   return (
-    <section id="building" className="py-16">
-      <span className="font-mono text-brass text-sm">09</span>
-      <h2 className="font-mono font-bold text-2xl sm:text-3xl mt-2 mb-6 flex items-center gap-3">
-        <span className="h-2.5 w-2.5 rounded-full bg-brass" aria-hidden="true" />
-        RIGHT NOW
-      </h2>
-
-      <FadeIn as="div">
-        {currentlyBuilding && (
-          <p className="text-primary/90 leading-relaxed mb-6">{currentlyBuilding}</p>
-        )}
-
-        <div className="font-mono text-sm space-y-1">
-          <p className="text-brass">
-            OPEN TO: Summer 2027 AI/ML &amp; Data Engineering internships
-          </p>
-          <p className="text-muted">Based in Texas &middot; open to relocation</p>
-        </div>
+    <section id="building" className="py-10">
+      <FadeIn as="div" className="flex items-center gap-3">
+        <span className="h-2 w-2 bg-brass animate-pulse" aria-hidden="true" />
+        <h2 className="font-mono text-xs uppercase tracking-widest text-muted">
+          Status &mdash; recording now
+        </h2>
       </FadeIn>
+
+      {currentlyBuilding && (
+        <p className="text-primary/90 leading-relaxed mt-4">{currentlyBuilding}</p>
+      )}
+
+      <p className="font-display italic text-2xl sm:text-3xl mt-4">
+        Open to Summer 2027 AI/ML &amp; Data Engineering internships.
+      </p>
+      <p className="font-mono text-xs text-muted mt-2">Based in Texas &middot; open to relocation</p>
     </section>
   )
 }

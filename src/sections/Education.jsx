@@ -2,13 +2,19 @@ import FadeIn from '../components/FadeIn'
 
 function Education() {
   return (
-    <section id="education" className="py-16">
-      <span className="font-mono text-brass text-sm">08</span>
+    <section id="education" className="py-10">
       <h2 className="sr-only">Education</h2>
-      <FadeIn as="p" className="font-mono text-sm text-muted mt-3">
-        University of Texas at Dallas &middot; B.S. Computer Science, expected Dec 2028 &middot;
-        Academic Excellence Scholar (full-ride) &middot; GPA 3.58 &middot; Relevant coursework:
-        Data Structures &amp; Algorithms, Probability &amp; Statistics
+      <FadeIn
+        as="div"
+        className="inline-flex flex-wrap items-center gap-x-3 gap-y-1 border border-muted/25 px-5 py-3 font-mono text-xs text-muted"
+      >
+        <span className="text-brass uppercase tracking-wide">Credential</span>
+        <span>&middot;</span>
+        <span>UT Dallas, B.S. Computer Science, exp. Dec 2028</span>
+        <span>&middot;</span>
+        <span>Academic Excellence Scholar, full-ride, GPA 3.58</span>
+        <span>&middot;</span>
+        <span>Coursework: Data Structures &amp; Algorithms, Probability &amp; Statistics</span>
       </FadeIn>
     </section>
   )
