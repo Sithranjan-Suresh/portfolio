@@ -14,21 +14,20 @@ import About from './sections/About'
 import Education from './sections/Education'
 import CurrentlyBuilding from './sections/CurrentlyBuilding'
 import Contact from './sections/Contact'
-import Placeholder from './sections/Placeholder'
 
-const builtSections = {
-  hero: Hero,
-  proof: ProofStrip,
-  experience: Experience,
-  'featured-project': FeaturedProject,
-  projects: OtherProjects,
-  skills: Skills,
-  github: GitHubActivity,
-  about: About,
-  education: Education,
-  building: CurrentlyBuilding,
-  contact: Contact,
-}
+const orderedSections = [
+  Hero,
+  ProofStrip,
+  Experience,
+  FeaturedProject,
+  OtherProjects,
+  Skills,
+  GitHubActivity,
+  About,
+  Education,
+  CurrentlyBuilding,
+  Contact,
+]
 
 function App() {
   const sectionIds = useMemo(() => sections.map((section) => section.id), [])
@@ -38,15 +37,12 @@ function App() {
     <>
       <SignalLine activeId={activeId} />
       <main className="lg:pl-20 px-6 max-w-5xl mx-auto">
-        {sections.map((section, index) => {
-          const SectionComponent = builtSections[section.id] ?? Placeholder
-          return (
-            <div key={section.id}>
-              <SectionComponent id={section.id} number={section.number} label={section.label} />
-              {index < sections.length - 1 && <ConfidenceBand />}
-            </div>
-          )
-        })}
+        {orderedSections.map((SectionComponent, index) => (
+          <div key={sections[index].id}>
+            <SectionComponent />
+            {index < orderedSections.length - 1 && <ConfidenceBand />}
+          </div>
+        ))}
       </main>
     </>
   )
