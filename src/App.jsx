@@ -9,6 +9,7 @@ import Experience from './sections/Experience'
 import FeaturedProject from './sections/FeaturedProject'
 import OtherProjects from './sections/OtherProjects'
 import Skills from './sections/Skills'
+import GitHubActivity from './sections/GitHubActivity'
 import About from './sections/About'
 import Education from './sections/Education'
 import CurrentlyBuilding from './sections/CurrentlyBuilding'
@@ -22,6 +23,7 @@ const builtSections = {
   'featured-project': FeaturedProject,
   projects: OtherProjects,
   skills: Skills,
+  github: GitHubActivity,
   about: About,
   education: Education,
   building: CurrentlyBuilding,
