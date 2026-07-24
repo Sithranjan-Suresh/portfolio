@@ -42,7 +42,7 @@ function Experience() {
       <div className="flex items-baseline gap-4 mb-16">
         <h2 className="font-display italic text-4xl sm:text-5xl">Experience</h2>
         <span className="h-px flex-1 bg-muted/20" />
-        <span className="font-mono text-xs text-muted uppercase tracking-widest">03 files</span>
+        <span className="font-mono text-xs text-muted uppercase tracking-widest">04 files</span>
       </div>
 
       <div className="flex flex-col gap-20 sm:gap-28">

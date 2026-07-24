@@ -17,9 +17,9 @@ import Contact from './sections/Contact'
 
 const orderedSections = [
   Hero,
+  FeaturedProject,
   ProofStrip,
   Experience,
-  FeaturedProject,
   OtherProjects,
   Skills,
   About,

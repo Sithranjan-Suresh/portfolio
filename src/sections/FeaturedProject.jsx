@@ -9,7 +9,7 @@ function FeaturedProject() {
     <section id="featured-project" className="py-28">
       <div className="flex flex-wrap items-end justify-between gap-4 mb-4">
         <p className="font-mono text-xs text-muted uppercase tracking-widest">
-          Featured specimen &middot; 04
+          Featured specimen &middot; 02
         </p>
         <span className="font-mono text-xs text-brass border border-brass/40 px-3 py-1">
           2nd &middot; AQX Data Bowl 2.0

@@ -31,9 +31,9 @@ function Hero() {
             BeanHacks. Aiming for Summer 2027 AI/ML internships.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 mt-9">
+          <div className="flex flex-col sm:flex-row sm:items-center gap-4 mt-9">
             <a
-              href="#experience"
+              href="#featured-project"
               className="w-full sm:w-auto bg-brass text-canvas font-mono text-sm uppercase tracking-wider font-semibold px-7 py-3.5 text-center hover:brightness-110 transition-colors motion-reduce:transition-none"
             >
               See my work
@@ -44,6 +44,14 @@ function Hero() {
               className="w-full sm:w-auto border border-muted/50 text-primary font-mono text-sm uppercase tracking-wider font-semibold px-7 py-3.5 text-center hover:border-brass transition-colors motion-reduce:transition-none"
             >
               Download resume
+            </a>
+            <a
+              href="https://github.com/Sithranjan-Suresh"
+              target="_blank"
+              rel="noreferrer"
+              className="font-mono text-sm text-muted hover:text-brass transition-colors motion-reduce:transition-none"
+            >
+              GitHub &rarr;
             </a>
           </div>
         </div>
