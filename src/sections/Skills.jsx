@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import ScanReveal from '../components/ScanReveal'
+import FadeIn from '../components/FadeIn'
 import { gsap, prefersReducedMotion } from '../lib/gsap'
 
 const skillGroups = [
@@ -68,42 +68,34 @@ function Skills() {
   }, [])
 
   return (
-    <section id="skills" className="py-24">
-      <span className="font-mono text-brass text-sm">06</span>
-      <h2 className="font-mono font-bold text-2xl sm:text-3xl mt-2 mb-8">STACK</h2>
+    <section id="skills" className="py-28">
+      <div className="flex items-baseline gap-4 mb-16">
+        <h2 className="font-display italic text-4xl sm:text-5xl">Instrument case</h2>
+        <span className="h-px flex-1 bg-muted/20" />
+        <span className="font-mono text-xs text-muted uppercase tracking-widest">06</span>
+      </div>
 
-      <ScanReveal as="div" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 font-mono text-sm">
-        {skillGroups.map((group) => (
-          <div key={group.title}>
-            <h3 className="text-muted uppercase tracking-wide mb-3">{group.title}</h3>
-            <ul className="space-y-1.5">
-              {group.items.map((item) => (
-                <li key={item} className="text-primary/90">
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
-      </ScanReveal>
-
-      <div ref={pathRef} className="bg-panel p-6 sm:p-8 mt-10">
-        <h3 className="font-mono text-xs text-muted uppercase tracking-wide mb-4">Learning Path</h3>
-        <div className="flex items-center justify-between max-w-2xl">
+      {/* Learning path as a calibration ruler with a "you are here" flag */}
+      <div ref={pathRef} className="mb-20">
+        <p className="font-mono text-xs text-muted uppercase tracking-wide mb-6">Calibration &middot; skill acquisition order</p>
+        <div className="flex items-start justify-between max-w-3xl">
           {learningPath.map((step, index) => (
             <div key={step.label} className="flex items-center flex-1 last:flex-none">
-              <div className="flex flex-col items-center gap-2">
+              <div className="flex flex-col items-center gap-2 relative">
+                {step.status === 'current' && (
+                  <span className="absolute -top-7 font-mono text-[10px] text-brass whitespace-nowrap">
+                    you are here
+                  </span>
+                )}
                 <span
                   data-lp-dot
-                  className={`block h-3 w-3 rounded-full border ${
+                  className={`block h-3 w-3 border ${
                     step.status === 'solid'
-                      ? 'bg-brass border-brass'
-                      : step.status === 'current'
-                        ? 'bg-canvas border-brass'
-                        : 'bg-canvas border-muted/60'
+                      ? 'bg-brass border-brass rotate-45'
+                      : 'bg-canvas border-brass rotate-45 animate-pulse'
                   }`}
                 />
-                <span className="font-mono text-xs text-muted whitespace-nowrap">{step.label}</span>
+                <span className="font-mono text-[10px] text-muted whitespace-nowrap">{step.label}</span>
               </div>
               {index < learningPath.length - 1 && (
                 <span data-lp-line className="h-px flex-1 bg-muted/30 mx-2 mb-5" />
@@ -111,6 +103,32 @@ function Skills() {
             </div>
           ))}
         </div>
+      </div>
+
+      {/* Skill inventory as specimen cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {skillGroups.map((group, i) => (
+          <FadeIn
+            key={group.title}
+            as="div"
+            delay={i * 0.06}
+            className="border border-muted/20 p-5"
+          >
+            <p className="font-mono text-[10px] text-brass uppercase tracking-widest mb-3">
+              {String(i + 1).padStart(2, '0')} &mdash; {group.title}
+            </p>
+            <div className="flex flex-wrap gap-1.5">
+              {group.items.map((item) => (
+                <span
+                  key={item}
+                  className="font-mono text-xs text-primary/85 border border-muted/25 px-2 py-1"
+                >
+                  {item}
+                </span>
+              ))}
+            </div>
+          </FadeIn>
+        ))}
       </div>
     </section>
   )
