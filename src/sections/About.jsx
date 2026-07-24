@@ -1,3 +1,5 @@
+import sajjadKhader from '../assets/sajjad-khader.jpg'
+
 function About() {
   return (
     <section id="about" className="py-24">
@@ -27,18 +29,31 @@ function About() {
           trying to collect a resume. I&rsquo;m trying to get good enough at this
           that the resume stops being the interesting part.
         </p>
-        <p>
-          I was also a guest on the{' '}
-          <a
-            href="https://www.youtube.com/watch?v=gmdQzlSkZLM"
-            target="_blank"
-            rel="noreferrer"
-            className="text-signal-amber hover:underline"
-          >
-            CSC podcast
-          </a>
-          , talking through some of this in more detail.
-        </p>
+      </div>
+
+      <div className="max-w-[38rem] bg-panel p-6 sm:p-8 mt-10 flex flex-col sm:flex-row gap-6 items-start">
+        <img
+          src={sajjadKhader}
+          alt="Meeting tech YouTuber Sajjad Khader"
+          loading="lazy"
+          className="w-32 h-32 object-cover flex-shrink-0"
+        />
+        <div>
+          <p className="font-mono text-xs text-muted uppercase tracking-wide mb-2">Fun fact</p>
+          <p className="text-primary/90 leading-relaxed">
+            I got to meet Sajjad Khader, one of my favorite tech YouTubers. I&rsquo;ve
+            also been a guest on the{' '}
+            <a
+              href="https://www.youtube.com/watch?v=gmdQzlSkZLM"
+              target="_blank"
+              rel="noreferrer"
+              className="text-signal-amber hover:underline"
+            >
+              CSC podcast
+            </a>
+            , talking through some of this in more detail.
+          </p>
+        </div>
       </div>
     </section>
   )
