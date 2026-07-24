@@ -1,5 +1,6 @@
 import underPressureDashboard from '../assets/under-pressure-dashboard.png'
 import paletteDashboard from '../assets/palette-dashboard.png'
+import ScanReveal from '../components/ScanReveal'
 
 const orderClasses = {
   1: 'order-1',
@@ -54,8 +55,10 @@ function OtherProjects() {
       </h2>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {projects.map((project) => (
-          <article
+          <ScanReveal
             key={project.name}
+            as="article"
+            delay={(project.desktopOrder - 1) * 0.15}
             className={`bg-panel flex flex-col ${orderClasses[project.mobileOrder]} ${desktopOrderClasses[project.desktopOrder]}`}
           >
             {project.image && (
@@ -79,7 +82,7 @@ function OtherProjects() {
                 GitHub &rarr;
               </a>
             </div>
-          </article>
+          </ScanReveal>
         ))}
       </div>
     </section>
