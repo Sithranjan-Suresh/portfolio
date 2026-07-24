@@ -4,14 +4,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        canvas: '#12141C',
-        panel: '#1B1E29',
-        'signal-amber': '#F2A93C',
-        'data-teal': '#3ED9C7',
-        primary: '#F3F1EA',
-        muted: '#878B9E',
+        canvas: '#0A0A0E',
+        panel: '#15151D',
+        signal: '#FF3355',
+        steel: '#7FA8FF',
+        primary: '#F5F4F0',
+        muted: '#8A8B95',
       },
       fontFamily: {
+        display: ['Anton', 'ui-sans-serif', 'sans-serif'],
         mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
         sans: ['Inter', 'ui-sans-serif', 'sans-serif'],
       },

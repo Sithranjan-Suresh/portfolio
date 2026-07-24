@@ -48,7 +48,7 @@ const projects = [
 function OtherProjects() {
   return (
     <section id="projects" className="py-24">
-      <span className="font-mono text-signal-amber text-sm">05</span>
+      <span className="font-mono text-signal text-sm">05</span>
       <h2 className="font-mono font-bold text-2xl sm:text-3xl mt-2 mb-8">
         MORE FROM THE HACKATHON CIRCUIT
       </h2>
@@ -68,13 +68,13 @@ function OtherProjects() {
             )}
             <div className="p-6 flex flex-col flex-1">
               <h3 className="font-mono font-bold text-lg">{project.name.toUpperCase()}</h3>
-              <p className="font-mono text-signal-amber text-sm mt-1">{project.placement}</p>
+              <p className="font-mono text-signal text-sm mt-1">{project.placement}</p>
               <p className="mt-4 text-primary/90 leading-relaxed flex-1">{project.description}</p>
               <a
                 href={project.github}
                 target="_blank"
                 rel="noreferrer"
-                className="font-mono text-sm text-data-teal mt-4 hover:underline"
+                className="font-mono text-sm text-steel mt-4 hover:underline"
               >
                 GitHub &rarr;
               </a>

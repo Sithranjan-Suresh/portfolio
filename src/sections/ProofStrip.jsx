@@ -8,12 +8,12 @@ const items = [
 function ProofStrip() {
   return (
     <section id="proof" className="py-8">
-      <span className="font-mono text-signal-amber text-sm">02</span>
+      <span className="font-mono text-signal text-sm">02</span>
       <h2 className="sr-only">Proof Strip</h2>
       <p className="font-mono text-sm sm:text-base uppercase tracking-wide text-muted mt-3 leading-relaxed">
         {items.map((item, index) => (
           <span key={item.rest}>
-            {item.placement && <span className="text-signal-amber">{item.placement}</span>}
+            {item.placement && <span className="text-signal">{item.placement}</span>}
             {item.placement && ' '}
             {item.rest}
             {index < items.length - 1 && <span className="mx-3 text-muted/50">&middot;</span>}

@@ -6,12 +6,12 @@ const stackTags = ['Python', 'nflverse', 'empirical Bayes', 'pytest', 'React', '
 function FeaturedProject() {
   return (
     <section id="featured-project" className="py-24">
-      <span className="font-mono text-signal-amber text-sm">04</span>
+      <span className="font-mono text-signal text-sm">04</span>
       <h2 className="font-mono font-bold text-2xl sm:text-3xl mt-2 mb-1">FEATURED PROJECT</h2>
 
       <div className="flex flex-wrap items-baseline justify-between gap-2 mb-8">
         <h3 className="font-mono font-bold text-xl">ICE IN HIS VEINS</h3>
-        <span className="font-mono text-signal-amber text-sm">2nd &middot; AQX Data Bowl 2.0</span>
+        <span className="font-mono text-signal text-sm">2nd &middot; AQX Data Bowl 2.0</span>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
@@ -22,7 +22,7 @@ function FeaturedProject() {
               src={dashboardScreenshot}
               alt="Ice in His Veins live dashboard, showing the confidence-band correction for Caleb Williams and Josh Allen"
               loading="lazy"
-              className="w-full h-auto border border-muted/20 hover:border-signal-amber transition-colors motion-reduce:transition-none"
+              className="w-full h-auto border border-muted/20 hover:border-signal transition-colors motion-reduce:transition-none"
             />
           </a>
         </div>
@@ -74,7 +74,7 @@ function FeaturedProject() {
               href="https://iceinhisveins.vercel.app/"
               target="_blank"
               rel="noreferrer"
-              className="text-data-teal hover:underline"
+              className="text-steel hover:underline"
             >
               View dashboard
             </a>
@@ -82,7 +82,7 @@ function FeaturedProject() {
               href="https://github.com/Sithranjan-Suresh/ice-in-his-veins"
               target="_blank"
               rel="noreferrer"
-              className="text-data-teal hover:underline"
+              className="text-steel hover:underline"
             >
               View on GitHub
             </a>

@@ -6,9 +6,9 @@ const currentlyBuilding = null
 function CurrentlyBuilding() {
   return (
     <section id="building" className="py-16">
-      <span className="font-mono text-signal-amber text-sm">09</span>
+      <span className="font-mono text-signal text-sm">09</span>
       <h2 className="font-mono font-bold text-2xl sm:text-3xl mt-2 mb-6 flex items-center gap-3">
-        <span className="h-2.5 w-2.5 rounded-full bg-signal-amber" aria-hidden="true" />
+        <span className="h-2.5 w-2.5 rounded-full bg-signal" aria-hidden="true" />
         RIGHT NOW
       </h2>
 
@@ -17,7 +17,7 @@ function CurrentlyBuilding() {
       )}
 
       <div className="font-mono text-sm space-y-1">
-        <p className="text-signal-amber">
+        <p className="text-signal">
           OPEN TO: Summer 2027 AI/ML &amp; Data Engineering internships
         </p>
         <p className="text-muted">Based in Texas &middot; open to relocation</p>

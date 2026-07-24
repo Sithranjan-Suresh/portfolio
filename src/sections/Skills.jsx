@@ -33,7 +33,7 @@ const learningPath = [
 function Skills() {
   return (
     <section id="skills" className="py-24">
-      <span className="font-mono text-signal-amber text-sm">06</span>
+      <span className="font-mono text-signal text-sm">06</span>
       <h2 className="font-mono font-bold text-2xl sm:text-3xl mt-2 mb-8">STACK</h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 font-mono text-sm">
@@ -60,9 +60,9 @@ function Skills() {
                 <span
                   className={`block h-3 w-3 rounded-full border ${
                     step.status === 'solid'
-                      ? 'bg-signal-amber border-signal-amber'
+                      ? 'bg-signal border-signal'
                       : step.status === 'current'
-                        ? 'bg-canvas border-signal-amber'
+                        ? 'bg-canvas border-signal'
                         : 'bg-canvas border-muted/60'
                   }`}
                 />

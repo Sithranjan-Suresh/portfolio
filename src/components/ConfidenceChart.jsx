@@ -45,12 +45,12 @@ function ConfidenceChart() {
                 x2={cx + tier.ciWidth / 2}
                 y1={y}
                 y2={y}
-                stroke="#3ED9C7"
+                stroke="#7FA8FF"
                 strokeWidth="2"
                 strokeLinecap="round"
                 opacity={0.35 + i * 0.13}
               />
-              <line x1={cx} x2={cx} y1={y - 4} y2={y + 4} stroke="#3ED9C7" strokeWidth="2" />
+              <line x1={cx} x2={cx} y1={y - 4} y2={y + 4} stroke="#7FA8FF" strokeWidth="2" />
             </g>
           )
         })}
@@ -62,18 +62,18 @@ function ConfidenceChart() {
           </text>
 
           {/* Naive bar */}
-          <rect x="0" y="20" width={(naive / maxValue) * 150} height="14" fill="#3ED9C7" opacity="0.35" />
+          <rect x="0" y="20" width={(naive / maxValue) * 150} height="14" fill="#7FA8FF" opacity="0.35" />
           <text x="0" y="46" fontFamily="JetBrains Mono, monospace" fontSize="10" className="fill-muted">
             Naive: 8.2 pts
           </text>
 
           {/* Corrected bar */}
-          <rect x="0" y="68" width={(corrected / maxValue) * 150} height="14" fill="#3ED9C7" />
-          <text x="0" y="94" fontFamily="JetBrains Mono, monospace" fontSize="10" fill="#3ED9C7">
+          <rect x="0" y="68" width={(corrected / maxValue) * 150} height="14" fill="#7FA8FF" />
+          <text x="0" y="94" fontFamily="JetBrains Mono, monospace" fontSize="10" fill="#7FA8FF">
             Corrected: 4.0 pts
           </text>
 
-          <text x="0" y="120" fontFamily="JetBrains Mono, monospace" fontSize="11" className="fill-signal-amber" fontWeight="700">
+          <text x="0" y="120" fontFamily="JetBrains Mono, monospace" fontSize="11" className="fill-signal" fontWeight="700">
             2.03x overstatement corrected
           </text>
         </g>

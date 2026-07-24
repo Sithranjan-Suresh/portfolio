@@ -1,7 +1,7 @@
 function Hero() {
   return (
     <section id="hero" className="py-24 lg:py-32">
-      <span className="font-mono text-signal-amber text-sm">01</span>
+      <span className="font-mono text-signal text-sm">01</span>
       <h1 className="font-mono font-extrabold text-4xl sm:text-5xl lg:text-7xl leading-[1.05] mt-4 max-w-3xl">
         SITHRANJAN SURESH.
         <br />
@@ -16,14 +16,14 @@ function Hero() {
       <div className="flex flex-col sm:flex-row gap-4 mt-8">
         <a
           href="#experience"
-          className="w-full sm:w-auto bg-signal-amber text-canvas font-mono font-semibold px-6 py-3 text-center hover:brightness-110 transition-colors motion-reduce:transition-none"
+          className="w-full sm:w-auto bg-signal text-canvas font-mono font-semibold px-6 py-3 text-center hover:brightness-110 transition-colors motion-reduce:transition-none"
         >
           See my work
         </a>
         <a
           href="/resume.pdf"
           download
-          className="w-full sm:w-auto border border-muted/60 text-primary font-mono font-semibold px-6 py-3 text-center hover:border-signal-amber transition-colors motion-reduce:transition-none"
+          className="w-full sm:w-auto border border-muted/60 text-primary font-mono font-semibold px-6 py-3 text-center hover:border-signal transition-colors motion-reduce:transition-none"
         >
           Download resume
         </a>

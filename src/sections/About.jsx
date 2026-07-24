@@ -19,7 +19,7 @@ const funFacts = [
           href="https://www.youtube.com/watch?v=gmdQzlSkZLM"
           target="_blank"
           rel="noreferrer"
-          className="text-signal-amber hover:underline"
+          className="text-signal hover:underline"
         >
           CSC podcast
         </a>
@@ -32,7 +32,7 @@ const funFacts = [
 function About() {
   return (
     <section id="about" className="py-24">
-      <span className="font-mono text-signal-amber text-sm">07</span>
+      <span className="font-mono text-signal text-sm">07</span>
       <h2 className="font-mono font-bold text-2xl sm:text-3xl mt-2 mb-8">ABOUT</h2>
       <div className="max-w-[38rem] space-y-6 leading-relaxed text-primary/90">
         <p>
