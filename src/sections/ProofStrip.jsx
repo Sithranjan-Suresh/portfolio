@@ -9,6 +9,7 @@ function ProofStrip() {
   return (
     <section id="proof" className="py-8">
       <span className="font-mono text-signal-amber text-sm">02</span>
+      <h2 className="sr-only">Proof Strip</h2>
       <p className="font-mono text-sm sm:text-base uppercase tracking-wide text-muted mt-3 leading-relaxed">
         {items.map((item, index) => (
           <span key={item.rest}>

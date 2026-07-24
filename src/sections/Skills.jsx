@@ -38,7 +38,7 @@ function Skills() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 font-mono text-sm">
         {skillGroups.map((group) => (
           <div key={group.title}>
-            <p className="text-muted uppercase tracking-wide mb-3">{group.title}</p>
+            <h3 className="text-muted uppercase tracking-wide mb-3">{group.title}</h3>
             <ul className="space-y-1.5">
               {group.items.map((item) => (
                 <li key={item} className="text-primary/90">
@@ -51,7 +51,7 @@ function Skills() {
       </div>
 
       <div className="bg-panel p-6 sm:p-8 mt-10">
-        <p className="font-mono text-xs text-muted uppercase tracking-wide mb-4">Learning Path</p>
+        <h3 className="font-mono text-xs text-muted uppercase tracking-wide mb-4">Learning Path</h3>
         <div className="flex items-center justify-between max-w-2xl">
           {learningPath.map((step, index) => (
             <div key={step.label} className="flex items-center flex-1 last:flex-none">
