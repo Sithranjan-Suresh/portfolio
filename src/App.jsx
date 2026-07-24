@@ -10,6 +10,7 @@ import OtherProjects from './sections/OtherProjects'
 import Skills from './sections/Skills'
 import About from './sections/About'
 import Education from './sections/Education'
+import CurrentlyBuilding from './sections/CurrentlyBuilding'
 import Placeholder from './sections/Placeholder'
 
 const builtSections = {
@@ -20,6 +21,7 @@ const builtSections = {
   skills: Skills,
   about: About,
   education: Education,
+  building: CurrentlyBuilding,
 }
 
 function App() {
