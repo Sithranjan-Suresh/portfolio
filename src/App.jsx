@@ -6,12 +6,14 @@ import { useActiveSection } from './hooks/useActiveSection'
 import Hero from './sections/Hero'
 import ProofStrip from './sections/ProofStrip'
 import Experience from './sections/Experience'
+import OtherProjects from './sections/OtherProjects'
 import Placeholder from './sections/Placeholder'
 
 const builtSections = {
   hero: Hero,
   proof: ProofStrip,
   experience: Experience,
+  projects: OtherProjects,
 }
 
 function App() {
