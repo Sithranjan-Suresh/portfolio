@@ -1,8 +1,10 @@
+import CountUp from '../components/CountUp'
+
 const statChips = [
-  { value: '2.4×', label: 'pass@1 lift, ASCEND' },
+  { count: { value: 2.4, decimals: 1, suffix: '×' }, label: 'pass@1 lift, ASCEND' },
   { value: '8.2→4.0', label: 'pt correction, Ice in His Veins' },
   { value: '1st', label: 'BeanHacks 2026' },
-  { value: '63,555', label: 'dropbacks analyzed' },
+  { count: { value: 63555 }, label: 'dropbacks analyzed' },
 ]
 
 const ticks = Array.from({ length: 25 }, (_, i) => i)
@@ -59,7 +61,9 @@ function Hero() {
                 key={chip.label}
                 className={`absolute w-48 bg-paper text-canvas p-4 shadow-lg shadow-black/30 ${positions[i]}`}
               >
-                <p className="font-display italic text-2xl leading-none">{chip.value}</p>
+                <p className="font-display italic text-2xl leading-none">
+                  {chip.count ? <CountUp {...chip.count} /> : chip.value}
+                </p>
                 <p className="font-mono text-[10px] uppercase tracking-wide mt-2 text-canvas/70">
                   {chip.label}
                 </p>
