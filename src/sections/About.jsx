@@ -6,9 +6,8 @@ const funFacts = [
   {
     image: sajjadKhader,
     alt: 'Meeting tech YouTuber Sajjad Khader',
-    caption: (
-      <>I got to meet Sajjad Khader, one of my favorite tech YouTubers.</>
-    ),
+    caption: <>Met Sajjad Khader, one of my favorite tech YouTubers.</>,
+    rotate: '-rotate-2',
   },
   {
     image: cscPodcast,
@@ -24,59 +23,75 @@ const funFacts = [
         >
           CSC podcast
         </a>
-        , talking through some of this in more detail.
+        .
       </>
     ),
+    rotate: 'rotate-2',
   },
 ]
 
 function About() {
   return (
-    <section id="about" className="py-24">
-      <span className="font-mono text-brass text-sm">07</span>
-      <h2 className="font-mono font-bold text-2xl sm:text-3xl mt-2 mb-8">ABOUT</h2>
-      <FadeIn as="div" className="max-w-[38rem] space-y-6 leading-relaxed text-primary/90">
-        <p>
-          I got into computer science the hard way. I failed the final in my first CS
-          class freshman year. Not a close call, an actual fail. I could have taken
-          that as a sign I picked the wrong major. Instead it became the thing that
-          made me take the subject seriously for the first time, and it&rsquo;s still
-          the story I tell when people ask why I do this.
-        </p>
-        <p>
-          I&rsquo;m working through the stack in order, on purpose: Python, then
-          classical ML, then deep learning, then NLP, then generative AI, each one a
-          prerequisite for actually understanding the next instead of skipping ahead
-          and faking it. Next up is landing an AI internship. I&rsquo;m also part of
-          Toastmasters, working on public speaking deliberately instead of hoping it
-          improves on its own, because half of shipping a technical project is being
-          able to explain it clearly to someone who wasn&rsquo;t in the room while
-          you built it, whether that&rsquo;s a hackathon judge or an interviewer.
-        </p>
-        <p>
-          I read a lot about discipline and habit-building, run a consistent
-          morning routine, and try to ship something new most weeks. I&rsquo;m not
-          trying to collect a resume. I&rsquo;m trying to get good enough at this
-          that the resume stops being the interesting part.
-        </p>
-      </FadeIn>
+    <section id="about" className="py-28">
+      <div className="flex items-baseline gap-4 mb-16">
+        <h2 className="font-display italic text-4xl sm:text-5xl">About the researcher</h2>
+        <span className="h-px flex-1 bg-muted/20" />
+        <span className="font-mono text-xs text-muted uppercase tracking-widest">07</span>
+      </div>
 
-      <FadeIn as="div" delay={0.1} className="max-w-[38rem] mt-10">
-        <p className="font-mono text-xs text-muted uppercase tracking-wide mb-4">Fun facts</p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          {funFacts.map((fact) => (
-            <div key={fact.alt} className="bg-panel">
-              <img
-                src={fact.image}
-                alt={fact.alt}
-                loading="lazy"
-                className="w-full h-40 object-cover"
-              />
-              <p className="p-5 text-primary/90 leading-relaxed text-sm">{fact.caption}</p>
-            </div>
-          ))}
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        <div className="lg:col-span-7">
+          <FadeIn as="p" className="font-display italic text-3xl sm:text-4xl leading-tight text-brass max-w-xl">
+            &ldquo;I failed the final in my first CS class freshman year. Not a close
+            call, an actual fail.&rdquo;
+          </FadeIn>
+
+          <FadeIn as="div" delay={0.1} className="space-y-5 leading-relaxed text-primary/85 mt-8 max-w-xl">
+            <p>
+              I could have taken that as a sign I picked the wrong major. Instead it
+              became the thing that made me take the subject seriously for the first
+              time, and it&rsquo;s still the story I tell when people ask why I do
+              this.
+            </p>
+            <p>
+              I&rsquo;m working through the stack in order, on purpose: Python, then
+              classical ML, then deep learning, then NLP, then generative AI, each one
+              a prerequisite for actually understanding the next instead of skipping
+              ahead and faking it. Next up is landing an AI internship. I&rsquo;m also
+              part of Toastmasters, working on public speaking deliberately, because
+              half of shipping a technical project is being able to explain it clearly
+              to someone who wasn&rsquo;t in the room while you built it.
+            </p>
+            <p>
+              I read a lot about discipline and habit-building, run a consistent
+              morning routine, and try to ship something new most weeks. I&rsquo;m not
+              trying to collect a resume. I&rsquo;m trying to get good enough at this
+              that the resume stops being the interesting part.
+            </p>
+          </FadeIn>
         </div>
-      </FadeIn>
+
+        <div className="lg:col-span-5 relative">
+          <p className="font-mono text-xs text-muted uppercase tracking-wide mb-6">
+            Margin notes
+          </p>
+          <div className="relative h-64 sm:h-72">
+            {funFacts.map((fact, i) => (
+              <FadeIn
+                key={fact.alt}
+                as="div"
+                delay={i * 0.12}
+                className={`absolute w-48 sm:w-56 bg-paper text-canvas p-3 shadow-xl shadow-black/40 ${fact.rotate} hover:rotate-0 transition-transform motion-reduce:transition-none ${
+                  i === 0 ? 'top-0 left-0' : 'top-16 sm:top-20 left-16 sm:left-24'
+                }`}
+              >
+                <img src={fact.image} alt={fact.alt} loading="lazy" className="w-full h-28 object-cover" />
+                <p className="text-xs leading-snug mt-2">{fact.caption}</p>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </div>
     </section>
   )
 }
