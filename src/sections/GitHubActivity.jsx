@@ -1,5 +1,11 @@
 const GITHUB_USERNAME = 'Sithranjan-Suresh'
 
+// TODO: replace with the two hackathon repos that have the cleanest README and commit history
+const pinnedRepos = [
+  { name: '[add pinned repo]', description: '[add a one-line description]', href: '#' },
+  { name: '[add pinned repo]', description: '[add a one-line description]', href: '#' },
+]
+
 function GitHubActivity() {
   return (
     <section id="github" className="py-24">
@@ -26,6 +32,19 @@ function GitHubActivity() {
       >
         View contribution history on GitHub &rarr;
       </a>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8">
+        {pinnedRepos.map((repo, index) => (
+          <a
+            key={index}
+            href={repo.href}
+            className="bg-panel p-6 block hover:border-signal-amber border border-transparent transition-colors motion-reduce:transition-none"
+          >
+            <p className="font-mono font-semibold text-signal-amber">{repo.name}</p>
+            <p className="text-muted text-sm mt-2">{repo.description}</p>
+          </a>
+        ))}
+      </div>
     </section>
   )
 }
