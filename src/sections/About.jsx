@@ -54,6 +54,14 @@ function About() {
               I do this.
             </p>
             <p>
+              I ended up specifically in AI, not just CS, because it&rsquo;s the first
+              area where the code running without errors doesn&rsquo;t mean it&rsquo;s
+              right. A model can be confidently, convincingly wrong, and the failure
+              mode is silent. That&rsquo;s a harder problem than a stack trace, and
+              it&rsquo;s the same problem Ice in His Veins is built around: catching the
+              cases where a system sounds sure of itself and shouldn&rsquo;t be.
+            </p>
+            <p>
               I&rsquo;m working through the stack in order, on purpose: Python, then
               classical ML, then deep learning, then NLP, then generative AI, each one
               a prerequisite for actually understanding the next instead of skipping

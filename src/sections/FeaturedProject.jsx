@@ -78,7 +78,21 @@ function FeaturedProject() {
         </div>
 
         <div className="lg:col-span-5">
-          <p className="font-mono text-xs text-muted uppercase tracking-wide mb-3">Stack</p>
+          <p className="font-mono text-xs text-muted uppercase tracking-wide mb-3">The correction, in short</p>
+          <pre className="bg-panel border border-muted/20 p-4 font-mono text-xs text-primary/90 overflow-x-auto leading-relaxed">
+{`def shrink(tier_mean, tier_var, grand_mean, prior_var):
+    # trust this tier's own mean less when its
+    # variance is high, i.e. when the sample is small
+    weight = prior_var / (prior_var + tier_var)
+    return grand_mean + weight * (tier_mean - grand_mean)`}
+          </pre>
+          <p className="font-mono text-[11px] text-muted mt-3 leading-relaxed">
+            The noisiest tier, smallest sample, highest leverage, gets pulled hardest
+            toward the grand mean. That&rsquo;s exactly the tier the naive stat trusted
+            most.
+          </p>
+
+          <p className="font-mono text-xs text-muted uppercase tracking-wide mt-8 mb-3">Stack</p>
           <div className="flex flex-wrap gap-2 font-mono text-xs">
             {stackTags.map((tag) => (
               <span key={tag} className="text-muted border border-muted/30 px-2 py-1">
