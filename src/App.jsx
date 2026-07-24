@@ -4,10 +4,12 @@ import SignalLine from './components/SignalLine'
 import ConfidenceBand from './components/ConfidenceBand'
 import { useActiveSection } from './hooks/useActiveSection'
 import Hero from './sections/Hero'
+import ProofStrip from './sections/ProofStrip'
 import Placeholder from './sections/Placeholder'
 
 const builtSections = {
   hero: Hero,
+  proof: ProofStrip,
 }
 
 function App() {
