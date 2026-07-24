@@ -65,9 +65,13 @@ function FeaturedProject() {
               {/* TODO: replace with real live dashboard link */}
               View dashboard [add link]
             </a>
-            <a href="#" className="text-data-teal hover:underline">
-              {/* TODO: replace with real GitHub repo link */}
-              View on GitHub [add link]
+            <a
+              href="https://github.com/Sithranjan-Suresh/ice-in-his-veins"
+              target="_blank"
+              rel="noreferrer"
+              className="text-data-teal hover:underline"
+            >
+              View on GitHub
             </a>
           </div>
         </div>

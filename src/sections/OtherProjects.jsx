@@ -13,15 +13,9 @@ const projects = [
   {
     name: 'Under Pressure',
     placement: '2nd Place, AQX Data Bowl 1.0',
-    description: (
-      <>
-        Modeled soccer players&rsquo; resilience under pressure using real match data.{' '}
-        <span className="text-signal-amber">
-          {/* TODO: add concrete numbers once available, matching the Ice in His Veins treatment */}
-          [add concrete numbers]
-        </span>
-      </>
-    ),
+    description:
+      'Applied VAEP (Valuing Actions by Estimating Probabilities) to StatsBomb open event data from the 2018 and 2022 World Cups to quantify how team performance holds up, or degrades, under high-pressure game states, built on real event-level match data rather than aggregated box scores.',
+    github: 'https://github.com/Sithranjan-Suresh/under-pressure',
     mobileOrder: 2,
     desktopOrder: 1,
   },
@@ -30,6 +24,7 @@ const projects = [
     placement: 'Award Winner, Ctrl+V Hackathon',
     description:
       'Built for the 50M+ people worldwide living with aphasia. A tap on any of 49 concepts reconstructs into a full spoken sentence, powered by Llama 3.3 70B on Groq with sub-1-second first token. Shipped as an installable, offline-capable PWA with service-worker emergency phrases, dual persona profiles, and a WCAG high-contrast mode.',
+    github: 'https://github.com/Sithranjan-Suresh/voca',
     mobileOrder: 3,
     desktopOrder: 2,
   },
@@ -38,6 +33,7 @@ const projects = [
     placement: '1st Place, BeanHacks',
     description:
       'Modeled flavor chemistry as a vector space and used deterministic grid search with greedy farthest-point batch coordination to regenerate optimized drink recipes in under 2 seconds per iteration. Replaced heuristic pricing with a fully auditable costing pipeline. Deployed on Linux via a Dockerized FastAPI/Uvicorn setup with Groq for inference.',
+    github: null,
     mobileOrder: 1,
     desktopOrder: 3,
   },
@@ -59,10 +55,21 @@ function OtherProjects() {
             <h3 className="font-mono font-bold text-lg">{project.name.toUpperCase()}</h3>
             <p className="font-mono text-signal-amber text-sm mt-1">{project.placement}</p>
             <p className="mt-4 text-primary/90 leading-relaxed flex-1">{project.description}</p>
-            <a href="#" className="font-mono text-sm text-data-teal mt-4 hover:underline">
-              {/* TODO: replace with real GitHub repo link */}
-              GitHub &rarr; [add link]
-            </a>
+            {project.github ? (
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noreferrer"
+                className="font-mono text-sm text-data-teal mt-4 hover:underline"
+              >
+                GitHub &rarr;
+              </a>
+            ) : (
+              <a href="#" className="font-mono text-sm text-data-teal mt-4 hover:underline">
+                {/* TODO: replace with real GitHub repo link */}
+                GitHub &rarr; [add link]
+              </a>
+            )}
           </article>
         ))}
       </div>

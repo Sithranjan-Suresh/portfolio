@@ -1,9 +1,16 @@
 const GITHUB_USERNAME = 'Sithranjan-Suresh'
 
-// TODO: replace with the two hackathon repos that have the cleanest README and commit history
 const pinnedRepos = [
-  { name: '[add pinned repo]', description: '[add a one-line description]', href: '#' },
-  { name: '[add pinned repo]', description: '[add a one-line description]', href: '#' },
+  {
+    name: 'ice-in-his-veins',
+    description: 'NFL pressure-performance modeling with empirical Bayes shrinkage. 2nd, AQX Data Bowl 2.0.',
+    href: 'https://github.com/Sithranjan-Suresh/ice-in-his-veins',
+  },
+  {
+    name: 'voca',
+    description: 'Assistive communication PWA for aphasia patients, powered by Llama 3.3 70B on Groq.',
+    href: 'https://github.com/Sithranjan-Suresh/voca',
+  },
 ]
 
 function GitHubActivity() {
@@ -38,6 +45,8 @@ function GitHubActivity() {
           <a
             key={index}
             href={repo.href}
+            target="_blank"
+            rel="noreferrer"
             className="bg-panel p-6 block hover:border-signal-amber border border-transparent transition-colors motion-reduce:transition-none"
           >
             <p className="font-mono font-semibold text-signal-amber">{repo.name}</p>

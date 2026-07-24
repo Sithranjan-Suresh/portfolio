@@ -16,11 +16,12 @@ function Contact() {
           Email
         </a>
         <a
-          href="#"
+          href="https://www.linkedin.com/in/sithranjansuresh/"
+          target="_blank"
+          rel="noreferrer"
           className="text-primary/90 hover:text-signal-amber transition-colors motion-reduce:transition-none"
         >
-          {/* TODO: replace with real LinkedIn profile URL */}
-          LinkedIn [add link]
+          LinkedIn
         </a>
         <a
           href="https://github.com/Sithranjan-Suresh"
