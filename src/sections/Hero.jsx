@@ -16,14 +16,14 @@ function Hero() {
       <div className="flex flex-col sm:flex-row gap-4 mt-8">
         <a
           href="#experience"
-          className="bg-signal-amber text-base font-mono font-semibold px-6 py-3 text-center hover:brightness-110 transition-colors motion-reduce:transition-none"
+          className="w-full sm:w-auto bg-signal-amber text-base font-mono font-semibold px-6 py-3 text-center hover:brightness-110 transition-colors motion-reduce:transition-none"
         >
           See my work
         </a>
         <a
           href="/resume.pdf"
           download
-          className="border border-muted/60 text-primary font-mono font-semibold px-6 py-3 text-center hover:border-signal-amber transition-colors motion-reduce:transition-none"
+          className="w-full sm:w-auto border border-muted/60 text-primary font-mono font-semibold px-6 py-3 text-center hover:border-signal-amber transition-colors motion-reduce:transition-none"
         >
           Download resume
         </a>
