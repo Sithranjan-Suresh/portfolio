@@ -23,10 +23,11 @@ const skillGroups = [
 
 const learningPath = [
   { label: 'PYTHON', status: 'solid' },
-  { label: 'NLP', status: 'solid' },
   { label: 'ML', status: 'solid' },
-  { label: 'DL', status: 'current' },
-  { label: 'GEN AI', status: 'next' },
+  { label: 'DL', status: 'solid' },
+  { label: 'NLP', status: 'solid' },
+  { label: 'GEN AI', status: 'solid' },
+  { label: 'AI INTERNSHIP', status: 'current' },
 ]
 
 function Skills() {

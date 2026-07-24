@@ -1,4 +1,33 @@
 import sajjadKhader from '../assets/sajjad-khader.jpg'
+import cscPodcast from '../assets/csc-podcast.jpg'
+
+const funFacts = [
+  {
+    image: sajjadKhader,
+    alt: 'Meeting tech YouTuber Sajjad Khader',
+    caption: (
+      <>I got to meet Sajjad Khader, one of my favorite tech YouTubers.</>
+    ),
+  },
+  {
+    image: cscPodcast,
+    alt: 'Guest appearance on the CSC podcast',
+    caption: (
+      <>
+        Guested on the{' '}
+        <a
+          href="https://www.youtube.com/watch?v=gmdQzlSkZLM"
+          target="_blank"
+          rel="noreferrer"
+          className="text-signal-amber hover:underline"
+        >
+          CSC podcast
+        </a>
+        , talking through some of this in more detail.
+      </>
+    ),
+  },
+]
 
 function About() {
   return (
@@ -14,14 +43,14 @@ function About() {
           the story I tell when people ask why I do this.
         </p>
         <p>
-          I&rsquo;m working through the stack in order, on purpose: Python first,
-          then NLP, then classical ML, then deep learning, then generative AI, each
-          one a prerequisite for actually understanding the next instead of skipping
-          ahead and faking it. I&rsquo;m also part of Toastmasters, working on
-          public speaking deliberately instead of hoping it improves on its own,
-          because half of shipping a technical project is being able to explain it
-          clearly to someone who wasn&rsquo;t in the room while you built it,
-          whether that&rsquo;s a hackathon judge or an interviewer.
+          I&rsquo;m working through the stack in order, on purpose: Python, then
+          classical ML, then deep learning, then NLP, then generative AI, each one a
+          prerequisite for actually understanding the next instead of skipping ahead
+          and faking it. Next up is landing an AI internship. I&rsquo;m also part of
+          Toastmasters, working on public speaking deliberately instead of hoping it
+          improves on its own, because half of shipping a technical project is being
+          able to explain it clearly to someone who wasn&rsquo;t in the room while
+          you built it, whether that&rsquo;s a hackathon judge or an interviewer.
         </p>
         <p>
           I read a lot about discipline and habit-building, run a consistent
@@ -31,28 +60,20 @@ function About() {
         </p>
       </div>
 
-      <div className="max-w-[38rem] bg-panel p-6 sm:p-8 mt-10 flex flex-col sm:flex-row gap-6 items-start">
-        <img
-          src={sajjadKhader}
-          alt="Meeting tech YouTuber Sajjad Khader"
-          loading="lazy"
-          className="w-32 h-32 object-cover flex-shrink-0"
-        />
-        <div>
-          <p className="font-mono text-xs text-muted uppercase tracking-wide mb-2">Fun fact</p>
-          <p className="text-primary/90 leading-relaxed">
-            I got to meet Sajjad Khader, one of my favorite tech YouTubers. I&rsquo;ve
-            also been a guest on the{' '}
-            <a
-              href="https://www.youtube.com/watch?v=gmdQzlSkZLM"
-              target="_blank"
-              rel="noreferrer"
-              className="text-signal-amber hover:underline"
-            >
-              CSC podcast
-            </a>
-            , talking through some of this in more detail.
-          </p>
+      <div className="max-w-[38rem] mt-10">
+        <p className="font-mono text-xs text-muted uppercase tracking-wide mb-4">Fun facts</p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          {funFacts.map((fact) => (
+            <div key={fact.alt} className="bg-panel">
+              <img
+                src={fact.image}
+                alt={fact.alt}
+                loading="lazy"
+                className="w-full h-40 object-cover"
+              />
+              <p className="p-5 text-primary/90 leading-relaxed text-sm">{fact.caption}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
