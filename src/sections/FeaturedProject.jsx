@@ -1,21 +1,64 @@
+import { useEffect, useRef, useState } from 'react'
 import ConfidenceChart from '../components/ConfidenceChart'
 import dashboardScreenshot from '../assets/ice-in-his-veins-dashboard.png'
+import ScanReveal from '../components/ScanReveal'
+import LockReveal from '../components/LockReveal'
+import { gsap, prefersReducedMotion } from '../lib/gsap'
 
 const stackTags = ['Python', 'nflverse', 'empirical Bayes', 'pytest', 'React', 'Vite', 'Vercel']
 
 function FeaturedProject() {
+  const panelRef = useRef(null)
+  const [locked, setLocked] = useState(false)
+
+  useEffect(() => {
+    const panel = panelRef.current
+    if (!panel) return
+
+    if (prefersReducedMotion()) {
+      setLocked(true)
+      return
+    }
+
+    gsap.set(panel, { opacity: 0, scale: 0.88 })
+
+    const tween = gsap.to(panel, {
+      opacity: 1,
+      scale: 1,
+      duration: 0.7,
+      ease: 'back.out(2)',
+      scrollTrigger: { trigger: panel, start: 'top 78%' },
+      onComplete: () => setLocked(true),
+    })
+
+    return () => {
+      tween.scrollTrigger?.kill()
+      tween.kill()
+    }
+  }, [])
+
   return (
     <section id="featured-project" className="py-24">
       <span className="font-mono text-signal text-sm">04</span>
       <h2 className="font-mono font-bold text-2xl sm:text-3xl mt-2 mb-1">FEATURED PROJECT</h2>
 
-      <div className="flex flex-wrap items-baseline justify-between gap-2 mb-8">
-        <h3 className="font-mono font-bold text-xl">ICE IN HIS VEINS</h3>
-        <span className="font-mono text-signal text-sm">2nd &middot; AQX Data Bowl 2.0</span>
+      <div className="flex flex-wrap items-center justify-between gap-2 mb-8">
+        <LockReveal as="h3" className="font-mono font-bold text-xl">ICE IN HIS VEINS</LockReveal>
+        <span className="font-mono text-sm flex items-center gap-2">
+          <span
+            className={`h-1.5 w-1.5 rounded-full bg-signal transition-opacity duration-500 ${locked ? 'opacity-100' : 'opacity-0'}`}
+          />
+          <span className="text-signal">2nd &middot; AQX Data Bowl 2.0</span>
+        </span>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-        <div className="order-1 bg-panel p-6 flex flex-col gap-6">
+        <div
+          ref={panelRef}
+          className={`order-1 bg-panel p-6 flex flex-col gap-6 transition-shadow duration-700 ${
+            locked ? 'shadow-[0_0_40px_-8px_rgba(255,51,85,0.5)]' : ''
+          }`}
+        >
           <ConfidenceChart />
           <a href="https://iceinhisveins.vercel.app/" target="_blank" rel="noreferrer">
             <img
@@ -27,7 +70,7 @@ function FeaturedProject() {
           </a>
         </div>
 
-        <div className="order-2">
+        <ScanReveal as="div" className="order-2">
           <p className="text-lg leading-relaxed">
             A model that tells you which NFL quarterbacks actually get better under
             pressure, and by how much, instead of trusting the stat everyone already
@@ -87,7 +130,7 @@ function FeaturedProject() {
               View on GitHub
             </a>
           </div>
-        </div>
+        </ScanReveal>
       </div>
     </section>
   )
