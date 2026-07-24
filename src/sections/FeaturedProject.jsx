@@ -61,9 +61,13 @@ function FeaturedProject() {
           </div>
 
           <div className="flex flex-wrap gap-6 mt-6 font-mono text-sm">
-            <a href="#" className="text-data-teal hover:underline">
-              {/* TODO: replace with real live dashboard link */}
-              View dashboard [add link]
+            <a
+              href="https://iceinhisveins.vercel.app/"
+              target="_blank"
+              rel="noreferrer"
+              className="text-data-teal hover:underline"
+            >
+              View dashboard
             </a>
             <a
               href="https://github.com/Sithranjan-Suresh/ice-in-his-veins"

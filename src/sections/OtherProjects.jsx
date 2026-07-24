@@ -33,7 +33,7 @@ const projects = [
     placement: '1st Place, BeanHacks',
     description:
       'Modeled flavor chemistry as a vector space and used deterministic grid search with greedy farthest-point batch coordination to regenerate optimized drink recipes in under 2 seconds per iteration. Replaced heuristic pricing with a fully auditable costing pipeline. Deployed on Linux via a Dockerized FastAPI/Uvicorn setup with Groq for inference.',
-    github: null,
+    github: 'https://github.com/Sithranjan-Suresh/palette',
     mobileOrder: 1,
     desktopOrder: 3,
   },
@@ -55,21 +55,14 @@ function OtherProjects() {
             <h3 className="font-mono font-bold text-lg">{project.name.toUpperCase()}</h3>
             <p className="font-mono text-signal-amber text-sm mt-1">{project.placement}</p>
             <p className="mt-4 text-primary/90 leading-relaxed flex-1">{project.description}</p>
-            {project.github ? (
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noreferrer"
-                className="font-mono text-sm text-data-teal mt-4 hover:underline"
-              >
-                GitHub &rarr;
-              </a>
-            ) : (
-              <a href="#" className="font-mono text-sm text-data-teal mt-4 hover:underline">
-                {/* TODO: replace with real GitHub repo link */}
-                GitHub &rarr; [add link]
-              </a>
-            )}
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noreferrer"
+              className="font-mono text-sm text-data-teal mt-4 hover:underline"
+            >
+              GitHub &rarr;
+            </a>
           </article>
         ))}
       </div>
