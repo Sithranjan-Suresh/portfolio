@@ -16,7 +16,7 @@ function Hero() {
       <div className="flex flex-col sm:flex-row gap-4 mt-8">
         <a
           href="#experience"
-          className="w-full sm:w-auto bg-signal-amber text-base font-mono font-semibold px-6 py-3 text-center hover:brightness-110 transition-colors motion-reduce:transition-none"
+          className="w-full sm:w-auto bg-signal-amber text-canvas font-mono font-semibold px-6 py-3 text-center hover:brightness-110 transition-colors motion-reduce:transition-none"
         >
           See my work
         </a>

@@ -8,7 +8,7 @@ function Contact() {
         <a
           href="/resume.pdf"
           download
-          className="bg-signal-amber text-base font-semibold px-6 py-3 hover:brightness-110 transition-colors motion-reduce:transition-none"
+          className="bg-signal-amber text-canvas font-semibold px-6 py-3 hover:brightness-110 transition-colors motion-reduce:transition-none"
         >
           Download resume
         </a>

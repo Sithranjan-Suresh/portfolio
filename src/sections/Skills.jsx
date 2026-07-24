@@ -61,8 +61,8 @@ function Skills() {
                     step.status === 'solid'
                       ? 'bg-signal-amber border-signal-amber'
                       : step.status === 'current'
-                        ? 'bg-base border-signal-amber'
-                        : 'bg-base border-muted/60'
+                        ? 'bg-canvas border-signal-amber'
+                        : 'bg-canvas border-muted/60'
                   }`}
                 />
                 <span className="font-mono text-xs text-muted whitespace-nowrap">{step.label}</span>

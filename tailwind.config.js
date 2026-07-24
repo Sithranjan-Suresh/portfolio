@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        base: '#12141C',
+        canvas: '#12141C',
         panel: '#1B1E29',
         'signal-amber': '#F2A93C',
         'data-teal': '#3ED9C7',

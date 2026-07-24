@@ -22,7 +22,7 @@ function SignalLine({ activeId }) {
                 className={`block h-[11px] w-[11px] rounded-full border transition-colors motion-reduce:transition-none ${
                   isActive
                     ? 'bg-signal-amber border-signal-amber'
-                    : 'bg-base border-muted/60 group-hover:border-signal-amber'
+                    : 'bg-canvas border-muted/60 group-hover:border-signal-amber'
                 }`}
               />
             </a>
