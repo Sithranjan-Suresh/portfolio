@@ -31,7 +31,6 @@ const learningPath = [
   { label: 'DL', status: 'solid' },
   { label: 'NLP', status: 'solid' },
   { label: 'GEN AI', status: 'solid' },
-  { label: 'AI INTERNSHIP', status: 'current' },
 ]
 
 function Skills() {
@@ -82,19 +81,7 @@ function Skills() {
           {learningPath.map((step, index) => (
             <div key={step.label} className="flex items-center flex-1 last:flex-none">
               <div className="flex flex-col items-center gap-2 relative">
-                {step.status === 'current' && (
-                  <span className="absolute -top-7 font-mono text-[10px] text-brass whitespace-nowrap">
-                    you are here
-                  </span>
-                )}
-                <span
-                  data-lp-dot
-                  className={`block h-3 w-3 border ${
-                    step.status === 'solid'
-                      ? 'bg-brass border-brass rotate-45'
-                      : 'bg-canvas border-brass rotate-45 animate-pulse'
-                  }`}
-                />
+                <span data-lp-dot className="block h-3 w-3 border bg-brass border-brass rotate-45" />
                 <span className="font-mono text-[10px] text-muted whitespace-nowrap">{step.label}</span>
               </div>
               {index < learningPath.length - 1 && (
@@ -103,6 +90,10 @@ function Skills() {
             </div>
           ))}
         </div>
+        <p className="font-mono text-xs text-brass mt-6 flex items-center gap-2">
+          <span className="h-1.5 w-1.5 bg-brass animate-pulse" aria-hidden="true" />
+          Next: landing an AI/ML internship, not a skill stage, the goal all five feed into.
+        </p>
       </div>
 
       {/* Skill inventory as specimen cards */}
