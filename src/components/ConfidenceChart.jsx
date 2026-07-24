@@ -73,7 +73,7 @@ function ConfidenceChart() {
             Corrected: 4.0 pts
           </text>
 
-          <text x="0" y="120" fontFamily="JetBrains Mono, monospace" fontSize="11" className="fill-signal" fontWeight="700">
+          <text x="0" y="120" fontFamily="JetBrains Mono, monospace" fontSize="11" className="fill-brass" fontWeight="700">
             2.03x overstatement corrected
           </text>
         </g>

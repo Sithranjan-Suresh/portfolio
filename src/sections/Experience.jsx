@@ -36,7 +36,7 @@ const roles = [
 function Experience() {
   return (
     <section id="experience" className="py-24">
-      <span className="font-mono text-signal text-sm">03</span>
+      <span className="font-mono text-brass text-sm">03</span>
       <h2 className="font-mono font-bold text-2xl sm:text-3xl mt-2 mb-8">EXPERIENCE</h2>
       <div className="flex flex-col gap-6">
         {roles.map((role) => (
@@ -46,7 +46,7 @@ function Experience() {
             </span>
             <p className="text-muted text-sm">{role.org}</p>
             <h3 className="font-semibold text-lg sm:text-xl mt-1">{role.title}</h3>
-            <LockReveal as="p" className="font-mono text-signal text-xl sm:text-2xl mt-4">
+            <LockReveal as="p" className="font-mono text-brass text-xl sm:text-2xl mt-4">
               {role.metric}
             </LockReveal>
             {role.subMetric && <p className="font-mono text-muted text-sm mt-1">{role.subMetric}</p>}

@@ -1,7 +1,6 @@
 import { useMemo } from 'react'
 import { sections } from './data/sections'
-import SignalLine from './components/SignalLine'
-import ConfidenceBand from './components/ConfidenceBand'
+import Ruler from './components/Ruler'
 import NoiseOverlay from './components/NoiseOverlay'
 import { useActiveSection } from './hooks/useActiveSection'
 import { useSmoothScroll } from './hooks/useSmoothScroll'
@@ -37,13 +36,10 @@ function App() {
   return (
     <>
       <NoiseOverlay />
-      <SignalLine activeId={activeId} />
-      <main className="lg:pl-20 px-6 max-w-5xl mx-auto">
+      <Ruler activeId={activeId} />
+      <main className="lg:pl-32 px-6 max-w-6xl mx-auto">
         {orderedSections.map((SectionComponent, index) => (
-          <div key={sections[index].id}>
-            <SectionComponent />
-            {index < orderedSections.length - 1 && <ConfidenceBand />}
-          </div>
+          <SectionComponent key={sections[index].id} />
         ))}
       </main>
     </>

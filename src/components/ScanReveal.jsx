@@ -50,7 +50,7 @@ function ScanReveal({ as: Tag = 'div', className = '', children, delay = 0, ...p
       <div
         ref={barRef}
         aria-hidden="true"
-        className="absolute inset-y-0 left-0 w-1/3 pointer-events-none z-10 bg-gradient-to-r from-transparent via-signal/70 to-transparent"
+        className="absolute inset-y-0 left-0 w-1/3 pointer-events-none z-10 bg-gradient-to-r from-transparent via-brass/70 to-transparent"
       />
       <div ref={contentRef} className="will-change-[opacity,filter]">
         {children}

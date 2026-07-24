@@ -1,43 +1,22 @@
 import { useEffect, useRef } from 'react'
-import { gsap, ScrollTrigger, prefersReducedMotion } from '../lib/gsap'
 import { getNoiseDataUrl } from '../lib/noiseTexture'
 
+// A quiet, constant paper-grain texture — like the tooth of real paper
+// under print, not an animated effect.
 function NoiseOverlay() {
   const ref = useRef(null)
 
   useEffect(() => {
     const el = ref.current
     if (!el) return
-
     el.style.backgroundImage = `url(${getNoiseDataUrl()})`
-
-    if (prefersReducedMotion()) {
-      el.style.opacity = '0.06'
-      return
-    }
-
-    const tween = gsap.to(el, {
-      opacity: 0.03,
-      ease: 'none',
-      scrollTrigger: {
-        trigger: document.documentElement,
-        start: 'top top',
-        end: 'bottom bottom',
-        scrub: true,
-      },
-    })
-
-    return () => {
-      tween.scrollTrigger?.kill()
-      tween.kill()
-    }
   }, [])
 
   return (
     <div
       ref={ref}
       aria-hidden="true"
-      className="fixed inset-0 z-40 pointer-events-none opacity-90 animate-grain-flicker motion-reduce:animate-none"
+      className="fixed inset-0 z-30 pointer-events-none opacity-[0.05]"
       style={{
         backgroundRepeat: 'repeat',
         backgroundSize: '160px 160px',

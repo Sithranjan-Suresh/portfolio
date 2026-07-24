@@ -39,16 +39,16 @@ function FeaturedProject() {
 
   return (
     <section id="featured-project" className="py-24">
-      <span className="font-mono text-signal text-sm">04</span>
+      <span className="font-mono text-brass text-sm">04</span>
       <h2 className="font-mono font-bold text-2xl sm:text-3xl mt-2 mb-1">FEATURED PROJECT</h2>
 
       <div className="flex flex-wrap items-center justify-between gap-2 mb-8">
         <LockReveal as="h3" className="font-mono font-bold text-xl">ICE IN HIS VEINS</LockReveal>
         <span className="font-mono text-sm flex items-center gap-2">
           <span
-            className={`h-1.5 w-1.5 rounded-full bg-signal transition-opacity duration-500 ${locked ? 'opacity-100' : 'opacity-0'}`}
+            className={`h-1.5 w-1.5 rounded-full bg-brass transition-opacity duration-500 ${locked ? 'opacity-100' : 'opacity-0'}`}
           />
-          <span className="text-signal">2nd &middot; AQX Data Bowl 2.0</span>
+          <span className="text-brass">2nd &middot; AQX Data Bowl 2.0</span>
         </span>
       </div>
 
@@ -65,7 +65,7 @@ function FeaturedProject() {
               src={dashboardScreenshot}
               alt="Ice in His Veins live dashboard, showing the confidence-band correction for Caleb Williams and Josh Allen"
               loading="lazy"
-              className="w-full h-auto border border-muted/20 hover:border-signal transition-colors motion-reduce:transition-none"
+              className="w-full h-auto border border-muted/20 hover:border-brass transition-colors motion-reduce:transition-none"
             />
           </a>
         </div>
@@ -117,7 +117,7 @@ function FeaturedProject() {
               href="https://iceinhisveins.vercel.app/"
               target="_blank"
               rel="noreferrer"
-              className="text-steel hover:underline"
+              className="text-measure hover:underline"
             >
               View dashboard
             </a>
@@ -125,7 +125,7 @@ function FeaturedProject() {
               href="https://github.com/Sithranjan-Suresh/ice-in-his-veins"
               target="_blank"
               rel="noreferrer"
-              className="text-steel hover:underline"
+              className="text-measure hover:underline"
             >
               View on GitHub
             </a>

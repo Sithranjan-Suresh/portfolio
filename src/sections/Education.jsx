@@ -3,7 +3,7 @@ import FadeIn from '../components/FadeIn'
 function Education() {
   return (
     <section id="education" className="py-16">
-      <span className="font-mono text-signal text-sm">08</span>
+      <span className="font-mono text-brass text-sm">08</span>
       <h2 className="sr-only">Education</h2>
       <FadeIn as="p" className="font-mono text-sm text-muted mt-3">
         University of Texas at Dallas &middot; B.S. Computer Science, expected Dec 2028 &middot;
