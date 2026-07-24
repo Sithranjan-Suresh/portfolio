@@ -1,3 +1,5 @@
+import ScanReveal from '../components/ScanReveal'
+
 const items = [
   { placement: '1st Place', rest: 'BeanHacks' },
   { placement: '2nd Place', rest: 'AQX Data Bowl (x2)' },
@@ -10,16 +12,18 @@ function ProofStrip() {
     <section id="proof" className="py-8">
       <span className="font-mono text-signal text-sm">02</span>
       <h2 className="sr-only">Proof Strip</h2>
-      <p className="font-mono text-sm sm:text-base uppercase tracking-wide text-muted mt-3 leading-relaxed">
-        {items.map((item, index) => (
-          <span key={item.rest}>
-            {item.placement && <span className="text-signal">{item.placement}</span>}
-            {item.placement && ' '}
-            {item.rest}
-            {index < items.length - 1 && <span className="mx-3 text-muted/50">&middot;</span>}
-          </span>
-        ))}
-      </p>
+      <ScanReveal as="div">
+        <p className="font-mono text-sm sm:text-base uppercase tracking-wide text-muted mt-3 leading-relaxed">
+          {items.map((item, index) => (
+            <span key={item.rest}>
+              {item.placement && <span className="text-signal">{item.placement}</span>}
+              {item.placement && ' '}
+              {item.rest}
+              {index < items.length - 1 && <span className="mx-3 text-muted/50">&middot;</span>}
+            </span>
+          ))}
+        </p>
+      </ScanReveal>
     </section>
   )
 }
