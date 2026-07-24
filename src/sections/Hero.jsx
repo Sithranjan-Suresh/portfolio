@@ -1,14 +1,22 @@
+import LockReveal from '../components/LockReveal'
+import Reticle from '../components/Reticle'
+
 function Hero() {
   return (
-    <section id="hero" className="py-24 lg:py-32">
-      <span className="font-mono text-signal text-sm">01</span>
-      <h1 className="font-mono font-extrabold text-4xl sm:text-5xl lg:text-7xl leading-[1.05] mt-4 max-w-3xl">
-        SITHRANJAN SURESH.
-        <br />
-        I BUILD AI SYSTEMS THAT
-        <br />
-        ACTUALLY HAVE TO WORK.
+    <section id="hero" className="relative py-24 lg:py-32 overflow-hidden">
+      <Reticle className="absolute -top-10 -right-10 sm:right-0 lg:right-20 w-64 h-64 sm:w-80 sm:h-80 text-signal/30 -z-10" />
+
+      <p className="font-mono text-signal text-sm tracking-widest">
+        <span className="text-muted mr-2">01</span>
+        ACQUIRING SIGNAL
+      </p>
+
+      <h1 className="font-display uppercase text-5xl sm:text-6xl lg:text-8xl leading-[0.95] mt-4 max-w-4xl">
+        <LockReveal as="span" className="block">SITHRANJAN SURESH.</LockReveal>
+        <LockReveal as="span" className="block">I BUILD AI SYSTEMS THAT</LockReveal>
+        <LockReveal as="span" className="block">ACTUALLY HAVE TO WORK.</LockReveal>
       </h1>
+
       <p className="text-muted text-base lg:text-lg mt-6 max-w-xl">
         CS student at UT Dallas. Four hackathons, four placements, including 1st at
         BeanHacks. Aiming for Summer 2027 AI/ML internships.
