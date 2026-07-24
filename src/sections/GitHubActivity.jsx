@@ -13,9 +13,19 @@ function GitHubActivity() {
       <img
         src={`https://ghchart.rshah.org/3ED9C7/${GITHUB_USERNAME}`}
         alt={`GitHub contribution graph for ${GITHUB_USERNAME}`}
-        className="w-full h-auto"
+        className="hidden min-[400px]:block w-full h-auto"
         loading="lazy"
       />
+
+      {/* Simplified fallback for viewports under 400px, where the full calendar grid is unreadable */}
+      <a
+        href={`https://github.com/${GITHUB_USERNAME}`}
+        target="_blank"
+        rel="noreferrer"
+        className="min-[400px]:hidden block bg-panel p-6 font-mono text-sm text-data-teal hover:underline"
+      >
+        View contribution history on GitHub &rarr;
+      </a>
     </section>
   )
 }
