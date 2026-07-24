@@ -1,5 +1,6 @@
 import sajjadKhader from '../assets/sajjad-khader.jpg'
 import cscPodcast from '../assets/csc-podcast.jpg'
+import FadeIn from '../components/FadeIn'
 
 const funFacts = [
   {
@@ -34,7 +35,7 @@ function About() {
     <section id="about" className="py-24">
       <span className="font-mono text-signal text-sm">07</span>
       <h2 className="font-mono font-bold text-2xl sm:text-3xl mt-2 mb-8">ABOUT</h2>
-      <div className="max-w-[38rem] space-y-6 leading-relaxed text-primary/90">
+      <FadeIn as="div" className="max-w-[38rem] space-y-6 leading-relaxed text-primary/90">
         <p>
           I got into computer science the hard way. I failed the final in my first CS
           class freshman year. Not a close call, an actual fail. I could have taken
@@ -58,9 +59,9 @@ function About() {
           trying to collect a resume. I&rsquo;m trying to get good enough at this
           that the resume stops being the interesting part.
         </p>
-      </div>
+      </FadeIn>
 
-      <div className="max-w-[38rem] mt-10">
+      <FadeIn as="div" delay={0.1} className="max-w-[38rem] mt-10">
         <p className="font-mono text-xs text-muted uppercase tracking-wide mb-4">Fun facts</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {funFacts.map((fact) => (
@@ -75,7 +76,7 @@ function About() {
             </div>
           ))}
         </div>
-      </div>
+      </FadeIn>
     </section>
   )
 }
