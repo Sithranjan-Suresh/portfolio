@@ -1,3 +1,5 @@
+import ConfidenceChart from '../components/ConfidenceChart'
+
 const stackTags = ['Python', 'nflverse', 'empirical Bayes', 'pytest', 'React', 'Vite', 'Vercel']
 
 function FeaturedProject() {
@@ -12,9 +14,8 @@ function FeaturedProject() {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-        <div className="order-1 bg-panel p-6 flex items-center justify-center min-h-[280px]">
-          {/* Confidence-band chart placeholder — replaced with real data viz in the next step */}
-          <p className="font-mono text-muted text-sm">[confidence-band chart]</p>
+        <div className="order-1 bg-panel p-6 flex items-center">
+          <ConfidenceChart />
         </div>
 
         <div className="order-2">
