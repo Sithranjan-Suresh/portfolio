@@ -1,4 +1,5 @@
 import ConfidenceChart from '../components/ConfidenceChart'
+import dashboardScreenshot from '../assets/ice-in-his-veins-dashboard.png'
 
 const stackTags = ['Python', 'nflverse', 'empirical Bayes', 'pytest', 'React', 'Vite', 'Vercel']
 
@@ -14,8 +15,16 @@ function FeaturedProject() {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-        <div className="order-1 bg-panel p-6 flex items-center">
+        <div className="order-1 bg-panel p-6 flex flex-col gap-6">
           <ConfidenceChart />
+          <a href="https://iceinhisveins.vercel.app/" target="_blank" rel="noreferrer">
+            <img
+              src={dashboardScreenshot}
+              alt="Ice in His Veins live dashboard, showing the confidence-band correction for Caleb Williams and Josh Allen"
+              loading="lazy"
+              className="w-full h-auto border border-muted/20 hover:border-signal-amber transition-colors motion-reduce:transition-none"
+            />
+          </a>
         </div>
 
         <div className="order-2">

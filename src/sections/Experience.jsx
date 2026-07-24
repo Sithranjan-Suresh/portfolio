@@ -1,3 +1,6 @@
+import acmResearchShowcase from '../assets/acm-research-showcase.webp'
+import biotechClub from '../assets/biotech-club.webp'
+
 const roles = [
   {
     org: 'ASCEND, ACM Research, UTD',
@@ -6,6 +9,7 @@ const roles = [
     metric: 'pass@1 5.9% → 14.0%  [2.4x]',
     subMetric: 'pass@10 6.0% → 16.0%',
     body: 'Led variant generation for a self-generated curriculum plus GRPO pipeline, fine-tuning a DeepSeek-Coder 1.3B model and raising pass@1 on Microsoft’s P3 benchmark from 5.9% to 14.0%, a 2.4x improvement, with pass@10 climbing from 6.0% to 16.0%. Built a fault-tolerant pipeline with structured JSON schemas, retry logic, and regex-based recovery that eliminated malformed-output failures entirely, and iterated on error logs across a two-pass generation process with 4-bit quantized DeepSeek-Coder to improve variant accuracy by 15%. Automated preprocessing and designed the output schema the downstream RL training pipeline consumed, cutting manual data-prep effort by 50% for the 4-person research team.',
+    image: { src: acmResearchShowcase, alt: 'Presenting the ASCEND research poster at the ACM Research Showcase' },
   },
   {
     org: 'Biotech Club, UTD',
@@ -14,6 +18,7 @@ const roles = [
     metric: '30+ students',
     subMetric: 'AthleteIQ capstone',
     body: 'Designed a 4-week applied ML curriculum for a non-technical audience and took 30+ students from zero ML background to independently deploying live FastAPI prediction apps. Built AthleteIQ, a full-stack injury-risk classification app with a FastAPI backend and a live SVG gauge frontend, as the capstone project the whole curriculum was built around.',
+    image: { src: biotechClub, alt: 'Teaching the AthleteIQ capstone during the Biotech Club ML workshop' },
   },
   {
     org: 'AFA CyberPatriot',
@@ -22,6 +27,7 @@ const roles = [
     metric: 'Top 200 of 3,000+ teams',
     subMetric: null,
     body: 'Led a 6-member team to a Top 200 finish nationally out of 3,000+ teams, owning system hardening across Windows, Linux, and Cisco networking environments.',
+    image: null,
   },
 ]
 
@@ -41,6 +47,14 @@ function Experience() {
             <p className="font-mono text-signal-amber text-xl sm:text-2xl mt-4">{role.metric}</p>
             {role.subMetric && <p className="font-mono text-muted text-sm mt-1">{role.subMetric}</p>}
             <p className="mt-4 text-primary/90 leading-relaxed">{role.body}</p>
+            {role.image && (
+              <img
+                src={role.image.src}
+                alt={role.image.alt}
+                loading="lazy"
+                className="mt-6 w-full max-w-md h-56 object-cover"
+              />
+            )}
           </article>
         ))}
       </div>
