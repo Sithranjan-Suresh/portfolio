@@ -47,13 +47,13 @@ function Experience() {
 
       {/* 3.5 Leadership & Activities */}
       <div className="mt-6 bg-panel p-6 sm:p-8">
-        <p className="text-muted text-sm">Member, Toastmasters</p>
+        <p className="text-muted text-sm">Secretary, Roaring Speakers Club (Toastmasters International) &middot; Jul 2026 – Present</p>
         <p className="mt-3 text-primary/90 leading-relaxed">
-          Working on public speaking deliberately, not just picking it up by accident.{' '}
-          <span className="text-signal-amber">
-            {/* TODO: fill in specifics once available — any role held, speech contests entered, or a specific speech/achievement */}
-            [add Toastmasters specifics: role, contests, or a speech that mattered]
-          </span>
+          Elected officer for Roaring Speakers, a Distinguished-status Toastmasters club, responsible
+          for official record-keeping, correspondence, and cross-organizational reporting. Maintain
+          meeting minutes and club records, manage the membership roster and officer records with
+          Toastmasters International, and apply parliamentary procedure to formal meeting governance,
+          contributing to the club&rsquo;s Distinguished Club status.
         </p>
       </div>
     </section>
