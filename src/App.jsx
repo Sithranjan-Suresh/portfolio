@@ -5,11 +5,13 @@ import ConfidenceBand from './components/ConfidenceBand'
 import { useActiveSection } from './hooks/useActiveSection'
 import Hero from './sections/Hero'
 import ProofStrip from './sections/ProofStrip'
+import Experience from './sections/Experience'
 import Placeholder from './sections/Placeholder'
 
 const builtSections = {
   hero: Hero,
   proof: ProofStrip,
+  experience: Experience,
 }
 
 function App() {
