@@ -16,15 +16,15 @@ function Hero() {
 
       <div className="grid grid-cols-1 lg:grid-cols-[1.3fr_1fr] gap-12 mt-6">
         <div className="relative pl-6 border-l border-muted/30">
-          <h1 className="font-display leading-[0.98] text-5xl sm:text-6xl lg:text-[5.5rem]">
-            <span className="block font-light italic text-muted">Sithranjan Suresh —</span>
+          <h1 className="font-display leading-[0.98] text-4xl sm:text-5xl lg:text-7xl">
+            <span className="block font-light italic text-muted text-3xl sm:text-4xl lg:text-5xl mb-1">Sithranjan Suresh,</span>
             <span className="block font-black">I build AI systems</span>
             <span className="block font-black">
               that <span className="italic text-brass">actually</span> work.
             </span>
           </h1>
 
-          <p className="text-muted text-base lg:text-lg mt-8 max-w-lg leading-relaxed">
+          <p className="text-primary/80 text-lg lg:text-xl mt-8 max-w-lg leading-relaxed">
             CS student at UT Dallas. Four hackathons, four placements, including 1st at
             BeanHacks. Aiming for Summer 2027 AI/ML internships.
           </p>

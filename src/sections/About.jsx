@@ -42,16 +42,16 @@ function About() {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
         <div className="lg:col-span-7">
           <FadeIn as="p" className="font-display italic text-3xl sm:text-4xl leading-tight text-brass max-w-xl">
-            &ldquo;I failed the final in my first CS class freshman year. Not a close
-            call, an actual fail.&rdquo;
+            &ldquo;I failed the final in my first CS class, freshman year of high
+            school. Not a close call, an actual fail.&rdquo;
           </FadeIn>
 
           <FadeIn as="div" delay={0.1} className="space-y-5 leading-relaxed text-primary/85 mt-8 max-w-xl">
             <p>
-              I could have taken that as a sign I picked the wrong major. Instead it
-              became the thing that made me take the subject seriously for the first
-              time, and it&rsquo;s still the story I tell when people ask why I do
-              this.
+              I could have taken that as a sign I&rsquo;d chosen the wrong path.
+              Instead it became the thing that made me take the subject seriously for
+              the first time, and it&rsquo;s still the story I tell when people ask why
+              I do this.
             </p>
             <p>
               I&rsquo;m working through the stack in order, on purpose: Python, then
@@ -75,17 +75,22 @@ function About() {
           <p className="font-mono text-xs text-muted uppercase tracking-wide mb-6">
             Margin notes
           </p>
-          <div className="relative h-64 sm:h-72">
+          <div className="relative h-80 sm:h-96">
             {funFacts.map((fact, i) => (
               <FadeIn
                 key={fact.alt}
                 as="div"
                 delay={i * 0.12}
-                className={`absolute w-48 sm:w-56 bg-paper text-canvas p-3 shadow-xl shadow-black/40 ${fact.rotate} hover:rotate-0 transition-transform motion-reduce:transition-none ${
-                  i === 0 ? 'top-0 left-0' : 'top-16 sm:top-20 left-16 sm:left-24'
+                className={`absolute w-48 sm:w-56 bg-paper text-canvas p-3 shadow-xl shadow-black/40 ${fact.rotate} hover:rotate-0 hover:z-10 transition-transform motion-reduce:transition-none ${
+                  i === 0 ? 'top-0 left-0' : 'top-36 sm:top-40 left-20 sm:left-28'
                 }`}
               >
-                <img src={fact.image} alt={fact.alt} loading="lazy" className="w-full h-28 object-cover" />
+                <img
+                  src={fact.image}
+                  alt={fact.alt}
+                  loading="lazy"
+                  className="w-full h-32 object-cover object-top"
+                />
                 <p className="text-xs leading-snug mt-2">{fact.caption}</p>
               </FadeIn>
             ))}

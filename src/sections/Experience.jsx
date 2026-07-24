@@ -98,7 +98,7 @@ function Experience() {
         className="mt-20 max-w-xl border-l-2 border-brass/50 pl-6 py-1"
       >
         <p className="font-mono text-xs text-muted uppercase tracking-wide">
-          Marginalia &middot; Secretary, Roaring Speakers Club (Toastmasters Intl.) &middot; Jul 2026 –
+          Also &middot; Secretary, Roaring Speakers Club (Toastmasters Intl.) &middot; Jul 2026 &ndash;
         </p>
         <p className="mt-2 text-primary/80 leading-relaxed text-sm">
           Elected officer for a Distinguished-status Toastmasters club: official record-keeping,

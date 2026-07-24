@@ -11,7 +11,7 @@ function CurrentlyBuilding() {
       <FadeIn as="div" className="flex items-center gap-3">
         <span className="h-2 w-2 bg-brass animate-pulse" aria-hidden="true" />
         <h2 className="font-mono text-xs uppercase tracking-widest text-muted">
-          Status &mdash; recording now
+          Status: recording now
         </h2>
       </FadeIn>
 

@@ -15,7 +15,7 @@ export default {
       fontFamily: {
         display: ['Fraunces', 'ui-serif', 'serif'],
         mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
-        sans: ['Inter', 'ui-sans-serif', 'sans-serif'],
+        sans: ['Fraunces', 'ui-serif', 'serif'],
       },
     },
   },

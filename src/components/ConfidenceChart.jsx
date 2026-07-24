@@ -20,7 +20,7 @@ function ConfidenceChart() {
   return (
     <figure className="w-full">
       <svg
-        viewBox="0 0 320 220"
+        viewBox="0 0 375 220"
         role="img"
         aria-labelledby="confidence-chart-title confidence-chart-desc"
         className="w-full h-auto"

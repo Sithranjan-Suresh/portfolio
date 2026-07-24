@@ -115,7 +115,7 @@ function Skills() {
             className="border border-muted/20 p-5"
           >
             <p className="font-mono text-[10px] text-brass uppercase tracking-widest mb-3">
-              {String(i + 1).padStart(2, '0')} &mdash; {group.title}
+              {String(i + 1).padStart(2, '0')} &middot; {group.title}
             </p>
             <div className="flex flex-wrap gap-1.5">
               {group.items.map((item) => (
