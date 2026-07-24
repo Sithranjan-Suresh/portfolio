@@ -1,5 +1,7 @@
 import acmResearchShowcase from '../assets/acm-research-showcase.webp'
 import biotechClub from '../assets/biotech-club.webp'
+import ScanReveal from '../components/ScanReveal'
+import LockReveal from '../components/LockReveal'
 
 const roles = [
   {
@@ -38,13 +40,15 @@ function Experience() {
       <h2 className="font-mono font-bold text-2xl sm:text-3xl mt-2 mb-8">EXPERIENCE</h2>
       <div className="flex flex-col gap-6">
         {roles.map((role) => (
-          <article key={role.org} className="bg-panel p-6 sm:p-8 relative">
+          <ScanReveal key={role.org} as="article" className="bg-panel p-6 sm:p-8">
             <span className="font-mono text-muted text-xs sm:absolute sm:top-6 sm:right-8 block mb-2 sm:mb-0">
               {role.date}
             </span>
             <p className="text-muted text-sm">{role.org}</p>
             <h3 className="font-semibold text-lg sm:text-xl mt-1">{role.title}</h3>
-            <p className="font-mono text-signal text-xl sm:text-2xl mt-4">{role.metric}</p>
+            <LockReveal as="p" className="font-mono text-signal text-xl sm:text-2xl mt-4">
+              {role.metric}
+            </LockReveal>
             {role.subMetric && <p className="font-mono text-muted text-sm mt-1">{role.subMetric}</p>}
             <p className="mt-4 text-primary/90 leading-relaxed">{role.body}</p>
             {role.image && (
@@ -55,12 +59,12 @@ function Experience() {
                 className="mt-6 w-full max-w-md h-56 object-cover"
               />
             )}
-          </article>
+          </ScanReveal>
         ))}
       </div>
 
       {/* 3.5 Leadership & Activities */}
-      <div className="mt-6 bg-panel p-6 sm:p-8">
+      <ScanReveal as="div" className="mt-6 bg-panel p-6 sm:p-8">
         <p className="text-muted text-sm">Secretary, Roaring Speakers Club (Toastmasters International) &middot; Jul 2026 – Present</p>
         <p className="mt-3 text-primary/90 leading-relaxed">
           Elected officer for Roaring Speakers, a Distinguished-status Toastmasters club, responsible
@@ -69,7 +73,7 @@ function Experience() {
           Toastmasters International, and apply parliamentary procedure to formal meeting governance,
           contributing to the club&rsquo;s Distinguished Club status.
         </p>
-      </div>
+      </ScanReveal>
     </section>
   )
 }
