@@ -27,6 +27,18 @@ function About() {
           trying to collect a resume. I&rsquo;m trying to get good enough at this
           that the resume stops being the interesting part.
         </p>
+        <p>
+          I was also a guest on the{' '}
+          <a
+            href="https://www.youtube.com/watch?v=gmdQzlSkZLM"
+            target="_blank"
+            rel="noreferrer"
+            className="text-signal-amber hover:underline"
+          >
+            CSC podcast
+          </a>
+          , talking through some of this in more detail.
+        </p>
       </div>
     </section>
   )
