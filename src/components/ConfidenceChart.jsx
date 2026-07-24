@@ -1,6 +1,7 @@
 // Leverage-tier confidence widening: illustrates that higher-leverage tiers
 // carry smaller samples and therefore wider confidence intervals, which is
 // exactly what the empirical Bayes shrinkage in Ice in His Veins corrects for.
+// Colors are tuned for the cream "paper" specimen card this sits on.
 const tiers = [
   { label: 'Tier 1', ciWidth: 14 },
   { label: 'Tier 2', ciWidth: 22 },
@@ -12,6 +13,8 @@ const tiers = [
 const naive = 8.2
 const corrected = 4.0
 const maxValue = 10
+const ink = '#101215'
+const measure = '#3E6E93'
 
 function ConfidenceChart() {
   return (
@@ -37,7 +40,7 @@ function ConfidenceChart() {
           const cx = 60
           return (
             <g key={tier.label}>
-              <text x="0" y={y + 4} className="fill-muted" fontFamily="JetBrains Mono, monospace" fontSize="9">
+              <text x="0" y={y + 4} fill={ink} opacity="0.55" fontFamily="JetBrains Mono, monospace" fontSize="9">
                 {tier.label}
               </text>
               <line
@@ -45,35 +48,35 @@ function ConfidenceChart() {
                 x2={cx + tier.ciWidth / 2}
                 y1={y}
                 y2={y}
-                stroke="#7FA8FF"
+                stroke={measure}
                 strokeWidth="2"
                 strokeLinecap="round"
-                opacity={0.35 + i * 0.13}
+                opacity={0.45 + i * 0.11}
               />
-              <line x1={cx} x2={cx} y1={y - 4} y2={y + 4} stroke="#7FA8FF" strokeWidth="2" />
+              <line x1={cx} x2={cx} y1={y - 4} y2={y + 4} stroke={measure} strokeWidth="2" />
             </g>
           )
         })}
 
         {/* Naive vs corrected comparison */}
         <g transform="translate(150, 10)">
-          <text x="0" y="6" className="fill-muted" fontFamily="JetBrains Mono, monospace" fontSize="9">
+          <text x="0" y="6" fill={ink} opacity="0.55" fontFamily="JetBrains Mono, monospace" fontSize="9">
             HIGHEST-LEVERAGE TIER SPREAD
           </text>
 
           {/* Naive bar */}
-          <rect x="0" y="20" width={(naive / maxValue) * 150} height="14" fill="#7FA8FF" opacity="0.35" />
-          <text x="0" y="46" fontFamily="JetBrains Mono, monospace" fontSize="10" className="fill-muted">
+          <rect x="0" y="20" width={(naive / maxValue) * 150} height="14" fill={measure} opacity="0.35" />
+          <text x="0" y="46" fill={ink} opacity="0.65" fontFamily="JetBrains Mono, monospace" fontSize="10">
             Naive: 8.2 pts
           </text>
 
           {/* Corrected bar */}
-          <rect x="0" y="68" width={(corrected / maxValue) * 150} height="14" fill="#7FA8FF" />
-          <text x="0" y="94" fontFamily="JetBrains Mono, monospace" fontSize="10" fill="#7FA8FF">
+          <rect x="0" y="68" width={(corrected / maxValue) * 150} height="14" fill={measure} />
+          <text x="0" y="94" fill={measure} fontFamily="JetBrains Mono, monospace" fontSize="10" fontWeight="700">
             Corrected: 4.0 pts
           </text>
 
-          <text x="0" y="120" fontFamily="JetBrains Mono, monospace" fontSize="11" className="fill-brass" fontWeight="700">
+          <text x="0" y="120" fill={ink} fontFamily="JetBrains Mono, monospace" fontSize="11" fontWeight="700">
             2.03x overstatement corrected
           </text>
         </g>
