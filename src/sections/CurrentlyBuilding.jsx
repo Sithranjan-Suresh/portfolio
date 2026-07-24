@@ -6,7 +6,7 @@ const currentlyBuilding = null
 function CurrentlyBuilding() {
   return (
     <section id="building" className="py-16">
-      <span className="font-mono text-signal-amber text-sm">10</span>
+      <span className="font-mono text-signal-amber text-sm">09</span>
       <h2 className="font-mono font-bold text-2xl sm:text-3xl mt-2 mb-6 flex items-center gap-3">
         <span className="h-2.5 w-2.5 rounded-full bg-signal-amber" aria-hidden="true" />
         RIGHT NOW

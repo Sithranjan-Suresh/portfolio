@@ -1,7 +1,7 @@
 function Education() {
   return (
     <section id="education" className="py-16">
-      <span className="font-mono text-signal-amber text-sm">09</span>
+      <span className="font-mono text-signal-amber text-sm">08</span>
       <h2 className="sr-only">Education</h2>
       <p className="font-mono text-sm text-muted mt-3">
         University of Texas at Dallas &middot; B.S. Computer Science, expected Dec 2028 &middot;

@@ -9,7 +9,6 @@ import Experience from './sections/Experience'
 import FeaturedProject from './sections/FeaturedProject'
 import OtherProjects from './sections/OtherProjects'
 import Skills from './sections/Skills'
-import GitHubActivity from './sections/GitHubActivity'
 import About from './sections/About'
 import Education from './sections/Education'
 import CurrentlyBuilding from './sections/CurrentlyBuilding'
@@ -22,7 +21,6 @@ const orderedSections = [
   FeaturedProject,
   OtherProjects,
   Skills,
-  GitHubActivity,
   About,
   Education,
   CurrentlyBuilding,

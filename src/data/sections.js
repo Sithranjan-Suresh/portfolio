@@ -5,9 +5,8 @@ export const sections = [
   { id: 'featured-project', number: '04', label: 'Featured Project' },
   { id: 'projects', number: '05', label: 'Other Projects' },
   { id: 'skills', number: '06', label: 'Skills' },
-  { id: 'github', number: '07', label: 'GitHub' },
-  { id: 'about', number: '08', label: 'About' },
-  { id: 'education', number: '09', label: 'Education' },
-  { id: 'building', number: '10', label: 'Right Now' },
-  { id: 'contact', number: '11', label: 'Contact' },
+  { id: 'about', number: '07', label: 'About' },
+  { id: 'education', number: '08', label: 'Education' },
+  { id: 'building', number: '09', label: 'Right Now' },
+  { id: 'contact', number: '10', label: 'Contact' },
 ]

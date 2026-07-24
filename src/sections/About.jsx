@@ -1,7 +1,7 @@
 function About() {
   return (
     <section id="about" className="py-24">
-      <span className="font-mono text-signal-amber text-sm">08</span>
+      <span className="font-mono text-signal-amber text-sm">07</span>
       <h2 className="font-mono font-bold text-2xl sm:text-3xl mt-2 mb-8">ABOUT</h2>
       <div className="max-w-[38rem] space-y-6 leading-relaxed text-primary/90">
         <p>

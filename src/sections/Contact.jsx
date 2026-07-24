@@ -1,7 +1,7 @@
 function Contact() {
   return (
     <section id="contact" className="py-24 pb-32">
-      <span className="font-mono text-signal-amber text-sm">11</span>
+      <span className="font-mono text-signal-amber text-sm">10</span>
       <h2 className="font-mono font-bold text-2xl sm:text-3xl mt-2 mb-8">LET&rsquo;S TALK</h2>
 
       <div className="flex flex-wrap items-center gap-x-8 gap-y-4 font-mono text-sm">
