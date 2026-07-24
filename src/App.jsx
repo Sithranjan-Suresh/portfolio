@@ -3,6 +3,7 @@ import { sections } from './data/sections'
 import SignalLine from './components/SignalLine'
 import ConfidenceBand from './components/ConfidenceBand'
 import { useActiveSection } from './hooks/useActiveSection'
+import { useSmoothScroll } from './hooks/useSmoothScroll'
 import Hero from './sections/Hero'
 import ProofStrip from './sections/ProofStrip'
 import Experience from './sections/Experience'
@@ -28,6 +29,7 @@ const orderedSections = [
 ]
 
 function App() {
+  useSmoothScroll()
   const sectionIds = useMemo(() => sections.map((section) => section.id), [])
   const activeId = useActiveSection(sectionIds)
 
