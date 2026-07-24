@@ -44,6 +44,18 @@ function Experience() {
           </article>
         ))}
       </div>
+
+      {/* 3.5 Leadership & Activities */}
+      <div className="mt-6 bg-panel p-6 sm:p-8">
+        <p className="text-muted text-sm">Member, Toastmasters</p>
+        <p className="mt-3 text-primary/90 leading-relaxed">
+          Working on public speaking deliberately, not just picking it up by accident.{' '}
+          <span className="text-signal-amber">
+            {/* TODO: fill in specifics once available — any role held, speech contests entered, or a specific speech/achievement */}
+            [add Toastmasters specifics: role, contests, or a speech that mattered]
+          </span>
+        </p>
+      </div>
     </section>
   )
 }
