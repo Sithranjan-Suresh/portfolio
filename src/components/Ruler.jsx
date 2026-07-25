@@ -5,7 +5,6 @@ function Ruler({ activeId }) {
     0,
     sections.findIndex((section) => section.id === activeId),
   )
-  const active = sections[activeIndex]
   const progress = (activeIndex / (sections.length - 1)) * 100
 
   return (
@@ -43,19 +42,15 @@ function Ruler({ activeId }) {
                 }`}
               />
               <span
-                className={`font-mono text-[10px] tabular-nums transition-colors duration-500 motion-reduce:transition-none ${
+                className={`font-mono text-[10px] uppercase tracking-wide whitespace-nowrap max-w-[6.5rem] truncate transition-colors duration-500 motion-reduce:transition-none ${
                   isActive ? 'text-brass' : 'text-muted/70'
                 }`}
               >
-                {section.number}
+                {section.label}
               </span>
             </a>
           )
         })}
-      </div>
-
-      <div className="font-mono text-[10px] text-muted uppercase tracking-widest -rotate-90 origin-bottom-left whitespace-nowrap absolute bottom-8 left-1">
-        {active?.label}
       </div>
     </nav>
   )
