@@ -1,11 +1,4 @@
-import CountUp from '../components/CountUp'
-
-const statChips = [
-  { count: { value: 2.4, decimals: 1, suffix: '×' }, label: 'pass@1 lift, ASCEND' },
-  { value: '8.2→4.0', label: 'pt correction, Ice in His Veins' },
-  { value: '1st', label: 'BeanHacks 2026' },
-  { count: { value: 63555 }, label: 'dropbacks analyzed' },
-]
+import HeroAvatar from '../components/HeroAvatar'
 
 const ticks = Array.from({ length: 25 }, (_, i) => i)
 
@@ -57,27 +50,7 @@ function Hero() {
         </div>
 
         <div className="hidden lg:block relative h-full min-h-[22rem]">
-          {statChips.map((chip, i) => {
-            const positions = [
-              'top-0 left-4 -rotate-3',
-              'top-24 right-0 rotate-2',
-              'top-52 left-10 rotate-1',
-              'top-[19rem] right-6 -rotate-2',
-            ]
-            return (
-              <div
-                key={chip.label}
-                className={`absolute w-48 bg-paper text-canvas p-4 shadow-lg shadow-black/30 ${positions[i]}`}
-              >
-                <p className="font-display italic text-2xl leading-none">
-                  {chip.count ? <CountUp {...chip.count} /> : chip.value}
-                </p>
-                <p className="font-mono text-[10px] uppercase tracking-wide mt-2 text-canvas/70">
-                  {chip.label}
-                </p>
-              </div>
-            )
-          })}
+          <HeroAvatar />
         </div>
       </div>
 
