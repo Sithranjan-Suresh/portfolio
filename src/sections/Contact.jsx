@@ -20,9 +20,9 @@ function Contact() {
         </div>
       </div>
 
-      <div className="relative pt-16 pb-28 px-4 sm:px-8 overflow-hidden">
+      <div className="relative pt-16 pb-28 px-4 sm:px-8">
         <div
-          className="absolute inset-0 bg-cover bg-center"
+          className="absolute inset-0 bg-cover bg-center rounded-sm overflow-hidden"
           style={{ backgroundImage: `url(${ctaBackground})` }}
           aria-hidden="true"
         />
@@ -31,7 +31,7 @@ function Contact() {
           aria-hidden="true"
         />
 
-        <div className="relative flex justify-center mb-3">
+        <div className="relative flex justify-center mb-32 sm:mb-36">
           <span className="inline-flex items-center gap-2 font-mono text-xs text-muted uppercase tracking-[0.3em]">
             <span className="w-1.5 h-1.5 bg-brass" />
             Status: recording now
@@ -39,15 +39,15 @@ function Contact() {
         </div>
 
         <FadeIn as="div" className="relative max-w-2xl mx-auto">
-          <GlowCard className="bg-panel/90 backdrop-blur-sm border border-muted/20 px-8 py-12 sm:px-12 text-center shadow-2xl shadow-black/50">
-            <img
-              src={ctaFox}
-              alt=""
-              aria-hidden="true"
-              className="absolute -top-24 sm:-top-28 left-1/2 -translate-x-1/2 w-24 sm:w-28 h-auto drop-shadow-[0_16px_20px_rgba(0,0,0,0.6)] select-none pointer-events-none"
-              draggable={false}
-            />
+          <img
+            src={ctaFox}
+            alt=""
+            aria-hidden="true"
+            className="absolute bottom-full left-1/2 -translate-x-1/2 mb-[-16px] w-20 sm:w-24 h-auto drop-shadow-[0_16px_20px_rgba(0,0,0,0.6)] select-none pointer-events-none z-10"
+            draggable={false}
+          />
 
+          <GlowCard className="bg-panel/90 backdrop-blur-sm border border-muted/20 px-8 pt-14 pb-12 sm:px-12 sm:pt-16 text-center shadow-2xl shadow-black/50">
             <p className="font-mono text-xs text-muted uppercase tracking-widest mb-4">
               Entry closed &middot; 10
             </p>
