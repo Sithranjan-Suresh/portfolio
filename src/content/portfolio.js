@@ -527,11 +527,8 @@ export const about = {
 // Record of facts that still need confirmation. Not rendered on any page.
 export const openQuestions = [
   'The newly attached resume could not be read. The Jul 2026 resume PDF served by the site is the only resume source.',
-  'biotechUTD lead role: LinkedIn says “CS/Engineering Lead, May 2026 to present”. The resume says “Incoming CS Lead, Aug 2026”. The site follows LinkedIn.',
   'Toastmasters Secretary (Jul 2026) is on the old site but not on LinkedIn or the resume.',
   'ASCEND metrics (pass@1, 15% accuracy, 50% data prep) are on the resume only. LinkedIn does not list them.',
-  'LinkedIn headline says “4x Hackathon Awardee” and the summary says “two wins so far” (Palette and Under Pressure). Other sources list Under Pressure as 2nd place.',
-  '“Full-ride” scholarship appears on the old site only, so the site says “Academic Excellence Scholar”.',
   'Voca: resume says “single taps”, README says 2 to 4 concept taps. Aphasia figure is 50M+ worldwide on the resume, 2 million Americans in the README.',
   'Team size and individual role are not stated for the hackathon projects, including Recover.',
   'Under Pressure and Recover have no dates. Palette, Voca, and Under Pressure have no live demo link. AthleteIQ has no repo link.',
