@@ -30,7 +30,7 @@ export const profile = {
     'Won awards at four hackathons, including 1st place at BeanHacks.',
   ],
   now: 'CS Lead at biotechUTD. Currently going deep on agent architectures, LangGraph, and RAG systems.',
-  email: 'sithranjan.suresh@gmail.com',
+  email: 'contactsithranjansuresh@gmail.com',
   linkedin: 'https://www.linkedin.com/in/sithranjansuresh/',
   github: 'https://github.com/Sithranjan-Suresh',
   resume: '/resume.pdf',
@@ -504,8 +504,8 @@ export const awards = [
 export const education = {
   school: 'The University of Texas at Dallas',
   degree: 'B.S. in Computer Science',
-  date: 'Aug 2025 to May 2028 (expected)',
-  details: ['Academic Excellence Scholar'],
+  date: 'Aug 2025 to present',
+  details: ['GPA 3.58', 'Academic Excellence Scholar'],
   coursework: [
     'Data Structures and Algorithms',
     'C/C++ Programming in UNIX',
@@ -573,10 +573,6 @@ export const about = {
 
 // Record of facts that still need confirmation. Not rendered on any page.
 export const openQuestions = [
-  'Email: the Oct 2026 resume lists contactsithranjansuresh@gmail.com. LinkedIn and the site use sithranjan.suresh@gmail.com.',
-  'GPA: the Oct 2026 resume no longer lists a GPA, so the site no longer shows one.',
-  'CS Lead start: the resume says Mar 2026, LinkedIn says May 2026 with the workshop role covering Mar to May. The site follows LinkedIn.',
-  'ASCEND dates: the resume says Feb to Oct 2026, LinkedIn says Feb to Apr 2026. The site follows the resume.',
   'Toastmasters Secretary (Jul 2026) is on the old site only, not on LinkedIn or the resume.',
   'Team size and individual role are not stated for the hackathon projects.',
   'Under Pressure and Recover have no dates. Palette, Voca, and Under Pressure have no live demo link. AthleteIQ has no repo link.',
