@@ -195,9 +195,7 @@ function Layout({ children }) {
         </div>
         <div className="dn-compare">
           <div className="dn-wrap">
-            Design preview B: Diner. <Link to="/casino">Open preview A: Casino</Link>
-            <Link to="/preview">Compare both</Link>
-            <a href="/">Original site</a>
+            Reference design, not the main site. <a href="/">Go to the main portfolio</a>
           </div>
         </div>
       </footer>
@@ -323,7 +321,7 @@ function MenuEntry({ project, onReceipt }) {
   const featured = project.course === 'special'
   return (
     <li className={`dn-entry${featured ? ' dn-entry--featured' : ''}`}>
-      {featured && (
+      {featured && project.image && (
         <Link to={`${BASE}/projects/${project.slug}`} className="dn-entry-img" tabIndex={-1} aria-hidden="true">
           <img src={project.image} alt="" loading="lazy" />
         </Link>
@@ -371,7 +369,7 @@ function Projects() {
         <p className="dn-script">The menu</p>
         <h1>Projects</h1>
         <p>
-          Six projects across research, data analysis, and full-stack apps. “View receipt” prints a one-page summary.
+          Projects across research, data analysis, and full-stack apps. “View receipt” prints a one-page summary.
           Every dish also has a full case study.
         </p>
       </header>
@@ -488,9 +486,11 @@ function CaseStudy() {
 
       <div className="dn-case-grid">
         <div className="dn-case-body">
-          <figure className={`dn-case-figure dn-case-figure--${project.imageKind}`}>
-            <img src={project.image} alt={project.imageAlt} />
-          </figure>
+          {project.image && (
+            <figure className={`dn-case-figure dn-case-figure--${project.imageKind}`}>
+              <img src={project.image} alt={project.imageAlt} />
+            </figure>
+          )}
 
           <section>
             <h2>The problem</h2>
@@ -599,7 +599,7 @@ function Experience() {
           <article key={job.id} className="dn-job">
             <div className="dn-job-side">
               <p className="dn-job-date">{job.date}</p>
-              <img src={job.image} alt={job.imageAlt} loading="lazy" />
+              {job.image && <img src={job.image} alt={job.imageAlt} loading="lazy" />}
             </div>
             <div>
               <h3>{job.title}</h3>
@@ -610,10 +610,11 @@ function Experience() {
                   <li key={pt}>{pt}</li>
                 ))}
               </ul>
-              {job.note && <p className="dn-note">{job.note}</p>}
-              <Link className="dn-textlink" to={`${BASE}/projects/${job.projectSlug}`}>
-                Read the {getProject(job.projectSlug).title} case study →
-              </Link>
+              {job.projectSlug && (
+                <Link className="dn-textlink" to={`${BASE}/projects/${job.projectSlug}`}>
+                  Read the {getProject(job.projectSlug).title} case study →
+                </Link>
+              )}
             </div>
           </article>
         ))}

@@ -1,4 +1,5 @@
 import { useMemo } from 'react'
+import './original.css'
 import { sections } from './data/sections'
 import Ruler from './components/Ruler'
 import NoiseOverlay from './components/NoiseOverlay'
